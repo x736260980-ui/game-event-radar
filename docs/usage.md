@@ -55,8 +55,8 @@ cd ..
 
 修改 `engine/industry/sources.json`、`topics.json`、分类及 `engine/modules/game-radar` 来源注册、查询和官方账号识别配置；站点文案位于 `engine/site/site.ts`。仅传 `-Game` 不足以适配新游戏，需核查来源并重新测试。
 
-## 下游交接
+## 导出事件
 
 事件页下载 JSON，或参考 `examples/*/handoff.json`。内容为事件、日期、来源、平台、已有内容 ID、评分结论、未知项与少量搜索词。它不是直接可执行的采集任务，不含详细策略，不自动抓评论。
 
-MediaCrawler 按自身规则接收并配置采集。新数据库页面 ID 与历史交接 ID 不同是正常的；网页下载使用当前实际导入映射。网页资料不计入评论样本。
+网页下载使用当前导入的事件 ID；示例文件保留历史事件 ID。

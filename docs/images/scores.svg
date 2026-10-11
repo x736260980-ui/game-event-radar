@@ -3,5 +3,4 @@
   <rect x="40" y="40" width="880" height="460" rx="16" fill="#15231d" stroke="#335747" stroke-dasharray="10 8"/>
   <text x="480" y="215" text-anchor="middle" fill="#88e8b0" font-family="sans-serif" font-size="42">独立双评分</text>
   <text x="480" y="280" text-anchor="middle" fill="#bac8c0" font-family="sans-serif" font-size="25">DeepSeek 初评 · Codex 盲评</text>
-  <text x="480" y="375" text-anchor="middle" fill="#8b9b92" font-family="sans-serif" font-size="22">截图占位 · 请替换为实际界面</text>
 </svg>
