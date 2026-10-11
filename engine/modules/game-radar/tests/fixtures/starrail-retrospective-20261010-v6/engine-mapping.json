@@ -1,0 +1,19 @@
+{
+  "categories": {
+    "EVT-001": "resource",
+    "EVT-002": "resource",
+    "EVT-003": "operations",
+    "EVT-004": "version",
+    "EVT-005": "version"
+  },
+  "existing_stories": {
+    "EVT-002": "78b42e3a-4e08-445b-ae39-4136ca9eb468",
+    "EVT-003": "2d1bc0b5-9ba8-4ca8-8c2a-da886c5b6210",
+    "EVT-004": "74050b4d-31e3-4918-ba71-5f4b4dc254e1"
+  },
+  "existing_relations": {
+    "EVT-002": "development",
+    "EVT-003": "development",
+    "EVT-004": "same_occurrence"
+  }
+}

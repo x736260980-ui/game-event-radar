@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {buildMaterialOutcomes,materialOutcomes,validateResearch,type Research} from '../contract.ts';
+import {finalReview} from '../update-policy.ts';
+const base:Research=JSON.parse(readFileSync(new URL('./fixtures/starrail-review-20261006-01/research-input.json',import.meta.url),'utf8'));
+const mapping={categories:Object.fromEntries(base.events.map((e:any)=>[e.id,e.category]))};
+const unassigned=()=>base.materials.filter(m=>m.decision!=='exclude'&&!base.events.some(e=>e.members.some(x=>x.material_id===m.id))).map(m=>({material_id:m.id,status:'pending' as const,reason:'待补具体事件边界及原文。'}));
+const complete=()=>({...structuredClone(base),run:{...base.run,workflow_version:'4'},material_outcomes:buildMaterialOutcomes(base.materials,base.events,unassigned())});
+test('qualification does not silently become event membership',()=>{const out=materialOutcomes(base);assert.equal(out.length,12);assert.equal(out.filter(o=>o.status==='grouped').length,3);assert.equal(out.find(o=>o.material_id==='SRC-003')!.status,'legacy_unassigned');});
+test('new workflow requires disposition of every material, including usable omissions',()=>{const d=complete();assert.equal(validateResearch(d,mapping).data.material_outcomes!.length,12);delete (d as any).material_outcomes;assert.throws(()=>validateResearch(d,mapping),/requires material_outcomes/);});
+test('missing, duplicate and unknown disposition references fail closed',()=>{assert.throws(()=>buildMaterialOutcomes(base.materials,base.events,unassigned().slice(1)),/Missing final disposition/);assert.throws(()=>buildMaterialOutcomes(base.materials,base.events,[...unassigned(),unassigned()[0]!]),/Duplicate/);assert.throws(()=>buildMaterialOutcomes(base.materials,base.events,[...unassigned(),{material_id:'SRC-999',status:'pending',reason:'未知'}]),/Unknown/);});
+test('assigned and excluded records cannot be disguised as pending',()=>{assert.throws(()=>buildMaterialOutcomes(base.materials,base.events,[...unassigned(),{material_id:'SRC-002',status:'pending',reason:'遗漏'}]),/assigned\/excluded/);const d=complete();d.material_outcomes.find(o=>o.material_id==='SRC-001')!.status='pending';assert.throws(()=>validateResearch(d,mapping),/status mismatch/);});
+test('ledger cannot invent or duplicate event membership',()=>{const d=complete();d.material_outcomes.find(o=>o.material_id==='SRC-002')!.event_ids=['EVT-999'];assert.throws(()=>validateResearch(d,mapping),/membership mismatch/);const d2=complete();d2.material_outcomes.push(d2.material_outcomes[0]!);assert.throws(()=>validateResearch(d2,mapping),/Invalid disposition/);});
+test('repair must reconcile dispositions against the final event membership',()=>{const events=structuredClone(base.events);events[0].members.push({material_id:'SRC-003',relation:'context',reason:'仅相关背景，不是同一次发生'});assert.throws(()=>buildMaterialOutcomes(base.materials,events,unassigned()),/assigned\/excluded/);const out=buildMaterialOutcomes(base.materials,events,unassigned().filter(n=>n.material_id!=='SRC-003'));assert.equal(out.find(o=>o.material_id==='SRC-003')!.status,'grouped');});
+test('zero events and zero materials are valid but nonempty omissions are not',()=>{assert.deepEqual(buildMaterialOutcomes([],[],[]),[]);assert.throws(()=>buildMaterialOutcomes(base.materials,[],[]),/Missing/);});
+test('new workflow retains the evidence safeguards of workflow three',()=>{const d=complete();d.events[0].occurrence='官方已经确认';assert.throws(()=>validateResearch(d,mapping),/Unsupported narrative/);});
+test('review counts unique materials, not member multiplicity or recommendations',()=>{assert.match(finalReview(complete()).material_disposition,/已归入事件 3 条/);});

@@ -1,0 +1,17 @@
+engine/node_modules/
+engine/apps/web/build/
+engine/apps/web/.react-router/
+engine/.env
+engine/.data/
+engine/.cache/
+runtime/
+runs/
+exports/
+.local/
+*.log
+*.zip
+*.tsbuildinfo
+.env
+.env.*.local
+!engine/.env.example
+!engine/.env.radar.example

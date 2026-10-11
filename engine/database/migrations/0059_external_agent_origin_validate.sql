@@ -1,0 +1,1 @@
+ALTER TABLE analyses VALIDATE CONSTRAINT analyses_origin_external_check;

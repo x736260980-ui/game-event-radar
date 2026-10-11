@@ -1,0 +1,104 @@
+{
+  "schema_version": "starrail-event-handoff-1.0",
+  "event_id": "6fdeb198-d81b-4fce-84e7-7ab8acff7949",
+  "title": "绝区零官方公布与星穹铁道联动角色卡芙卡与知更鸟",
+  "game": "崩坏：星穹铁道",
+  "date_range": {
+    "start": "2026-10-09",
+    "end": "2026-10-09"
+  },
+  "summary": "2026年10月9日，绝区零官方英文X账号发布《绝区零》×《崩坏：星穹铁道》联动角色公布，称联动将在3.4版本正式上线，卡芙卡与知更鸟将前往新艾利都。",
+  "player_discussion": "玩家讨论集中在卡芙卡与知更鸟在《绝区零》中的定位、是否在双方游戏内展开联动，以及部分玩家对角色选择的不满与争论。",
+  "sources": [
+    {
+      "url": "https://x.com/ZZZ_EN/status/2108529665098805723",
+      "platform": "x.com",
+      "content_id": null,
+      "published_at": "2026-10-09",
+      "access": "body",
+      "relation": "same_occurrence"
+    },
+    {
+      "url": "https://www.hoyolab.com/article/47024540",
+      "platform": "www.hoyolab.com",
+      "content_id": null,
+      "published_at": null,
+      "access": "body",
+      "relation": "development"
+    },
+    {
+      "url": "https://fandomwire.com/hoyoverse-reveals-characters-zenless-zone-zero-x-honkai-star-rail-collab",
+      "platform": "fandomwire.com",
+      "content_id": null,
+      "published_at": null,
+      "access": "body",
+      "relation": "development"
+    },
+    {
+      "url": "https://www.hoyolab.com/article/47024990",
+      "platform": "www.hoyolab.com",
+      "content_id": null,
+      "published_at": null,
+      "access": "body",
+      "relation": "development"
+    },
+    {
+      "url": "https://www.hoyolab.com/article/47028551",
+      "platform": "www.hoyolab.com",
+      "content_id": null,
+      "published_at": null,
+      "access": "body",
+      "relation": "development"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Nrpb6EEEH",
+      "platform": "bilibili",
+      "content_id": "BV1Nrpb6EEEH",
+      "published_at": "2026-10-09",
+      "access": "excerpt_only",
+      "relation": "development"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1Wrpb67EsH",
+      "platform": "bilibili",
+      "content_id": "BV1Wrpb67EsH",
+      "published_at": "2026-10-09",
+      "access": "excerpt_only",
+      "relation": "development"
+    }
+  ],
+  "platforms": [
+    "x.com",
+    "www.hoyolab.com",
+    "fandomwire.com",
+    "bilibili"
+  ],
+  "scoring": {
+    "status": "complete",
+    "decision": "recommend",
+    "first": {
+      "reviewer": "deepseek",
+      "total": 76,
+      "decision": "recommend"
+    },
+    "second": {
+      "reviewer": "codex",
+      "total": 67,
+      "decision": "recommend"
+    },
+    "reason": "两次均建议研究，来源资格通过。官方发生明确，社区正文有角色选择、定位预期和跨游戏取舍的具体意见，具备分析价值；技能、获取方式、双方同时联动和总体态度尚不能确认。"
+  },
+  "unknowns": [
+    "卡芙卡与知更鸟在《绝区零》中的具体技能、战斗定位与专属音擎尚未公布",
+    "联动内容是否在双方游戏内同时展开，官方原帖未明确",
+    "3.4版本具体上线日期未在官方原帖中给出",
+    "一条HoYoLAB回复存在AI翻译纠正，不将原错译作为支持意见；其他个体争论也不代表总体。"
+  ],
+  "search_terms": [
+    "绝区零",
+    "崩坏星穹铁道",
+    "联动",
+    "卡芙卡",
+    "知更鸟"
+  ]
+}

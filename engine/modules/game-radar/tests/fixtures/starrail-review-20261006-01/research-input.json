@@ -1,0 +1,639 @@
+{
+  "schema_version": "game-event-radar-input-1.0",
+  "run": {
+    "id": "starrail-review-20261006-01",
+    "game": "崩坏：星穹铁道",
+    "as_of": "2026-10-06",
+    "researcher": "对话Agent发布前校核",
+    "method": "沿用04号真实API研究取得的12条材料，独立校核具体事件与证据边界；本批没有新增搜索或模型API调用。自动04号修复失败，未发布。",
+    "window_days": 14,
+    "model_api_calls": 0,
+    "model_receipt_ids": [],
+    "web_receipt_ids": [],
+    "execution_mode": "conversation_research",
+    "workflow_version": "3",
+    "source_run_id": "starrail-auto-20261006-04"
+  },
+  "materials": [
+    {
+      "id": "SRC-001",
+      "title": "《崩坏：星穹铁道》跃迁概率公示",
+      "url": "https://sr.mihoyo.com/news/public",
+      "source_name": "sr.mihoyo.com",
+      "source_kind": "official",
+      "origin_group": "sr-official-probability-notice",
+      "published_at": null,
+      "observed_on": "2026-10-06",
+      "access": "excerpt_only",
+      "access_note": "search_excerpt；unavailable；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "新闻\n角色\n世界\n社区\n充值中心\n成长关爱系统\n登 录\n【登出】\n下载游戏\n新闻\n角色\n世界\n社区\n充值中心\n登 录\n【登出】\n成长关爱系统\n《崩坏：星穹铁道》跃迁概率公示\n最新资讯\n《崩坏：星穹铁道》跃迁概率公示\n# Image 16\n用户协议| 隐私政策| 儿童隐私政策| 自",
+      "summary": "官方新闻页仅显示导航、登录入口、页脚与适龄提示等外壳内容，标题为《崩坏：星穹铁道》跃迁概率公示，但未提供任何概率公示正文或具体日期。",
+      "decision": "exclude",
+      "selection_reason": "仅有页面外壳，无目标正文内容，无法作为事件或玩家反馈依据。",
+      "original_url": "https://sr.mihoyo.com/news/public",
+      "date_basis": "页面无发布日期，date_candidates为空；正文仅为导航与页脚，无文章内容",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "the database system is starting up"
+        },
+        {
+          "provider": "firecrawl",
+          "status": "the database system is starting up"
+        }
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "TapTap玩家长评：老角色上场机会与价值消耗",
+      "url": "https://www.taptap.cn/review/50643447",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "taptap-review-50643447",
+      "published_at": "2026-10-05",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "机App\nAndroid APK 下载\nApp Store 下载\nTapTap PC 版\nWindows 版下载\nMac 版下载\n崩坏：星穹铁道\n红羽RhyFlex9\n玩过 31.6 小时后评价（总时长 31.6 小时）\n不推荐:运营服务\n崩铁的问题恐怕不止是膨胀这么简单，根源之",
+      "summary": "一名TapTap玩家不推荐运营服务，认为崩铁问题不止数值膨胀，根源之一是老角色上场机会少，除“深渊”外难有发挥空间，价值消耗快导致迭代感强；对比《明日方舟》有矢量突破、肉鸽等玩法让干员持续就业，建议崩铁让老角色多上场以挽回口碑。",
+      "decision": "use",
+      "selection_reason": "具体玩家评论，含明确日期与限定观点，可作为老角色就业与膨胀讨论的玩家反馈。",
+      "original_url": "https://www.taptap.cn/review/50643447",
+      "date_basis": "片段末尾明确标注“2026/10/5”，为评论发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "《崩坏：星穹铁道》乐子神智取米哈游_游戏新闻_17173.com中国游戏门户站",
+      "url": "http://news.17173.com/content/09302026/222345980.shtml",
+      "source_name": "news.17173.com",
+      "source_kind": "media",
+      "origin_group": "activity-lezishen-2026",
+      "published_at": "2026-09-30",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "《崩坏：星穹铁道》乐子神智取米哈游\n崩坏星穹铁道\n2026-09-30 22:23:45\n评论\n导语\n崩坏星穹铁道「乐子神智取米哈游」活动上线！集结好友组队做任务，赢星琼与百万周边好礼，参与镇伏贪饕汇聚愿力，解锁全新故事情报！\n「乐子神智取米哈游」\n贪饕苏醒在即，星球将被吞噬。\n",
+      "summary": "17173转载公众号内容，介绍《崩坏：星穹铁道》“乐子神智取米哈游”网页活动上线，活动时间为2026年9月28日10:00至11月11日6:00，包含邀请好友回归组队做任务抽星琼与周边，以及游戏内“镇伏贪饕，汇聚愿力”汇集全服愿力解锁故事与奖励情报。",
+      "decision": "use",
+      "selection_reason": "媒体转载的活动介绍，含具体活动名称、时间与玩法，可作为活动信息线索，但来源为转载公众号。",
+      "original_url": "http://news.17173.com/content/09302026/222345980.shtml",
+      "date_basis": "文章页面明确标注“2026-09-30 22:23:45”为发布时间；9月28日为活动开放时间，非文章发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "4.6版本「月升之前，与兽共舞」激励计划现已开启",
+      "url": "https://sr.mihoyo.com/news/166490",
+      "source_name": "sr.mihoyo.com",
+      "source_kind": "official",
+      "origin_group": "sr-official-incentive-4.6",
+      "published_at": null,
+      "observed_on": "2026-10-06",
+      "access": "excerpt_only",
+      "access_note": "search_excerpt；unavailable；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "自4.6版本上线起，米游社将开启系列征集活动，关注「崩坏：星穹铁道」版区，参与绘画、攻略征集，就有机会赢取星琼、游戏周边及创作币等好礼。 下载米游社App-点击「我的」",
+      "summary": "官方页面标题为4.6版本「月升之前，与兽共舞」激励计划现已开启，正文仅说明米游社开启绘画、攻略征集活动，可赢取星琼、周边及创作币，未提供具体时间或更多细节。",
+      "decision": "watch",
+      "selection_reason": "官方激励计划信息，但片段过短且无日期，仅可作活动存在线索，需原文补充。",
+      "original_url": "https://sr.mihoyo.com/news/166490",
+      "date_basis": "页面无发布日期，date_candidates为空；正文仅一句征集活动说明",
+      "content_kind": "shell",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "the database system is starting up"
+        },
+        {
+          "provider": "firecrawl",
+          "status": "the database system is starting up"
+        }
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "TapTap玩家回顾：黄泉投入、深渊体验与退坑说法",
+      "url": "https://www.taptap.cn/review/50643746",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "taptap-review-50643746",
+      "published_at": null,
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。日期或读取资格不足，程序降为观察。",
+      "excerpt": "p\nAndroid APK 下载\nApp Store 下载\nTapTap PC 版\nWindows 版下载\nMac 版下载\n崩坏：星穹铁道\nTap胺\n玩过 363 小时后评价（总时长 363 小时）\n推荐:可玩性画面音乐\n不推荐:运营服务\n身为一个学生党，当初被卡芙卡pv吸引来玩",
+      "summary": "一名TapTap玩家表示因本次深渊退坑并注销账号，回顾因卡芙卡PV入坑、为黄泉抽2+1并补命座队友的经历，认为后来被新体系抛弃，感叹数值膨胀逆天、运营服务不佳，怀念匹诺康尼剧情与前瞻直播等时光。",
+      "decision": "watch",
+      "selection_reason": "具体玩家退坑与膨胀体验反馈，含限定个人观点，但发布日期未知。",
+      "original_url": "https://www.taptap.cn/review/50643746",
+      "date_basis": "片段仅显示“修改于21小时前”，无明确日期，date_candidates为空，无法确定发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "《崩坏：星穹铁道》4.6版本活动跃迁（其一）_游戏新闻_17173.com中国游戏门户站",
+      "url": "http://news.17173.com/content/09282026/210957581.shtml",
+      "source_name": "news.17173.com",
+      "source_kind": "media",
+      "origin_group": "sr-4.6-warp-phase1",
+      "published_at": "2026-09-28",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "《崩坏：星穹铁道》4.6版本活动跃迁（其一）\n崩坏星穹铁道\n2026-09-28 21:09:57\n评论\n导语\n《崩坏：星穹铁道》4.6版本活动跃迁开启！限定5星角色「真珠」及光锥「献给明日的色彩」概率提升，人气角色「绯英」返场！4星角色青雀、雪衣、米沙同步UP，跃迁时间至11月",
+      "summary": "17173转载公众号内容，介绍《崩坏：星穹铁道》4.6版本活动跃迁（其一）：限定5星角色「真珠（欢愉•冰）」与光锥「献给明日的色彩」概率提升，4星角色青雀、雪衣、米沙及多把4星光锥同步UP，跃迁时间为2026/09/28版本更新后至2026/11/10 15:00；限定5星角色「绯英（欢愉•物理）」与光锥「邂逅于下一个花季」返场，时间为2026/09/28至2026/10/21 11:59。",
+      "decision": "use",
+      "selection_reason": "媒体转载的卡池跃迁信息，含具体角色、光锥与时间，可作为抽卡活动线索，但来源为转载公众号。",
+      "original_url": "http://news.17173.com/content/09282026/210957581.shtml",
+      "date_basis": "文章页面明确标注“2026-09-28 21:09:57”为发布时间；跃迁时间为活动时间，非文章发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "4.3版本「沉于生者的忘川」激励计划现已开启 - 崩坏",
+      "url": "https://sr.mihoyo.com/news/164428",
+      "source_name": "sr.mihoyo.com",
+      "source_kind": "official",
+      "origin_group": "sr-official-incentive-4.3",
+      "published_at": null,
+      "observed_on": "2026-10-06",
+      "access": "excerpt_only",
+      "access_note": "search_excerpt；unavailable；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "自4.3版本上线起，米游社将开启系列征集活动，关注「崩坏：星穹铁道」版区，参与绘画、攻略征集，就有机会赢取星琼、游戏周边及创作币等好礼。 下载米游社App-点击「我的」",
+      "summary": "官方页面标题为4.3版本「沉于生者的忘川」激励计划现已开启，正文仅说明米游社开启绘画、攻略征集活动，可赢取星琼、周边及创作币，未提供具体时间或更多细节。",
+      "decision": "watch",
+      "selection_reason": "官方激励计划信息，但片段过短且无日期，仅可作活动存在线索，需原文补充。",
+      "original_url": "https://sr.mihoyo.com/news/164428",
+      "date_basis": "页面无发布日期，date_candidates为空；正文仅一句征集活动说明",
+      "content_kind": "shell",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "the database system is starting up"
+        },
+        {
+          "provider": "firecrawl",
+          "status": "the database system is starting up"
+        }
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "TapTap玩家评价：剧情体验、补体系压力与未证实传闻",
+      "url": "https://www.taptap.cn/review/50649882",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "taptap-review-50649882",
+      "published_at": "2026-10-06",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "Android APK 下载\nApp Store 下载\nTapTap PC 版\nWindows 版下载\nMac 版下载\n崩坏：星穹铁道\nkanrin\n玩过 150 小时后评价（总时长 150 小时）\n推荐:可玩性画面音乐\n不推荐:运营服务\n我是初三的时候开始玩崩铁的，当时是被流萤",
+      "summary": "一名TapTap玩家回顾初三入坑经历，认为匹诺康尼剧情是巅峰，翁法罗斯虽有谜语争议但自己喜欢有深度的剧情；现在觉得剧情缺乏深度、数值膨胀严重、需不停补体系抽角色补金、福利偏少，很久没在剧情中见到卡芙卡，犹豫是否退坑，并提到听说5.0主推SP卡芙卡，准备到时再看。",
+      "decision": "use",
+      "selection_reason": "具体玩家对剧情、膨胀、福利与退坑意愿的反馈，含明确日期与限定个人观点。",
+      "original_url": "https://www.taptap.cn/review/50649882",
+      "date_basis": "片段末尾明确标注“2026/10/6”，为评论发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-009",
+      "title": "《崩坏：星穹铁道》4.6版本「月升之前，与兽共舞」前瞻特别节目_游戏新闻_17173.com中国游戏门户站",
+      "url": "http://news.17173.com/content/09152026/141948478.shtml",
+      "source_name": "news.17173.com",
+      "source_kind": "media",
+      "origin_group": "hsr-4.6-preview-special",
+      "published_at": "2026-09-15",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。日期或读取资格不足，程序降为观察。",
+      "excerpt": "《崩坏：星穹铁道》4.6版本「月升之前，与兽共舞」前瞻特别节目\n崩坏星穹铁道\n2026-09-15 14:19:48\n评论\n导语\n《崩坏：星穹铁道》4.6版本「月升之前，与兽共舞」前瞻特别节目9月20日19:30直播！官方送兑换码福利与神秘礼物，开拓者不容错过！\n《崩坏：星穹铁道",
+      "summary": "17173转载介绍《崩坏：星穹铁道》4.6版本「月升之前，与兽共舞」前瞻特别节目，称节目将于2026年9月20日19:30在官方直播间播出，期间发放兑换码并抽取幸运开拓者送神秘礼物，并附版本预告文案。",
+      "decision": "watch",
+      "selection_reason": "提供4.6版本前瞻节目的具体时间与官方福利安排，属可核验的版本活动信息；来源为媒体转载，需与官方公告交叉确认",
+      "original_url": "http://news.17173.com/content/09152026/141948478.shtml",
+      "date_basis": "页面明确标注发布时间2026-09-15 14:19:48，为文章发布日期；9月20日为前瞻直播时间，非发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-010",
+      "title": "《崩壞：星穹鐵道》4.6版本預告：「月升之前，與獸共舞」",
+      "url": "https://hsr.hoyoverse.com/zh-cn/news/166179",
+      "source_name": "hsr.hoyoverse.com",
+      "source_kind": "official",
+      "origin_group": "hsr-4.6-preview-special",
+      "published_at": "2026-09-20",
+      "observed_on": "2026-10-06",
+      "access": "excerpt_only",
+      "access_note": "search_excerpt；unavailable；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。日期或读取资格不足，程序降为观察。",
+      "excerpt": "《崩壞：星穹鐵道》4.6版本預告：「月升之前，與獸共舞」. 2026/9/20. 蠢動於幽暗的獸再度開口，索求一位神明作為祭品。在月亮重新升起前，唯有智者的血方能平息牠的飢渴",
+      "summary": "米哈游官方发布《崩坏：星穹铁道》4.6版本预告「月升之前，与兽共舞」，附版本预告文案，提及幽暗之兽索求神明祭品、月亮升起前需智者之血。",
+      "decision": "watch",
+      "selection_reason": "官方来源，确认4.6版本名称与预告文案，可作为版本信息的一手依据；但technical_kind为unavailable，仅能依据标题与日期使用",
+      "original_url": "https://hsr.hoyoverse.com/zh-tw/news/166179",
+      "date_basis": "页面明确标注2026/9/20，为官方预告发布日期",
+      "content_kind": "shell",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "the database system is starting up"
+        }
+      ]
+    },
+    {
+      "id": "SRC-011",
+      "title": "TapTap玩家长评：剧情演出、命途与星启模式体验",
+      "url": "https://www.taptap.cn/review/50604031",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "taptap-review-50604031",
+      "published_at": "2026-10-02",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "\nAndroid APK 下载\nApp Store 下载\nTapTap PC 版\nWindows 版下载\nMac 版下载\n崩坏：星穹铁道\n木子新山鸡\n玩过 329 小时后评价（总时长 331 小时）\n推荐:画面音乐\n不推荐:可玩性运营服务\n因为打算骂，所以先说会儿优点。清体力应该",
+      "summary": "TapTap玩家长评，肯定清体力轻松、技能动画技术力、角色设计风格与匹诺康尼前剧情，同时批评翁法罗斯3.4后解密冗长、站桩动作、PPT式演出、哲学文案过多；认为记忆与欢愉命途设计失败、老角色淘汰严重、配队成本升至6-8金、深渊星启模式为三路困难加剧拉踩、定价过高，表示将转为低消费。",
+      "decision": "use",
+      "selection_reason": "个人玩家反馈，包含具体版本节点、角色强度与运营批评，保留其主观限定；可作为玩家体验与不满的样本，不代表总体",
+      "original_url": "https://www.taptap.cn/review/50604031",
+      "date_basis": "页面明确标注2026/10/2，为评价发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    },
+    {
+      "id": "SRC-012",
+      "title": "《崩坏：星穹铁道》「方寸大冒险」活动介绍_游戏新闻_17173.com中国游戏门户站",
+      "url": "http://news.17173.com/content/09102026/225432822.shtml",
+      "source_name": "news.17173.com",
+      "source_kind": "media",
+      "origin_group": "hsr-fangcun-adventure",
+      "published_at": "2026-09-10",
+      "observed_on": "2026-10-06",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。日期或读取资格不足，程序降为观察。",
+      "excerpt": "《崩坏：星穹铁道》「方寸大冒险」活动介绍\n崩坏星穹铁道\n2026-09-10 22:54:32\n评论\n导语\n《崩坏：星穹铁道》「方寸大冒险」活动开启！集结勇者小队，挑战银河级难关，击败强敌赢取丰厚奖励。快来体验大半个银河的麻烦吧！\n踏上方寸大冒险，这里装下了大半个银河的麻烦。集结",
+      "summary": "17173转载介绍《崩坏：星穹铁道》「方寸大冒险」活动，称活动开启，玩家需集结勇者小队挑战银河级难关并击败强敌赢取奖励，详情指向游戏内公告。",
+      "decision": "watch",
+      "selection_reason": "提供具体活动名称与玩法概述，属可核验的活动信息；来源为媒体转载，需以游戏内公告为准",
+      "original_url": "http://news.17173.com/content/09102026/225432822.shtml",
+      "date_basis": "页面明确标注发布时间2026-09-10 22:54:32，为文章发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-001",
+      "title": "4.6版本活动跃迁（其一）开启：真珠与绯英卡池",
+      "occurrence": "媒体转载称《崩坏：星穹铁道》4.6版本活动跃迁（其一）于2026年9月28日版本更新后开启，限定5星角色「真珠（欢愉•冰）」与光锥「献给明日的色彩」概率提升，4星角色青雀、雪衣、米沙及多把4星光锥同步UP，持续至2026年11月10日15:00；限定5星角色「绯英（欢愉•物理）」与光锥「邂逅于下一个花季」返场，时间为2026年9月28日至2026年10月21日11:59。",
+      "decision": "watch",
+      "decision_reason": "该材料为媒体转载公众号的卡池信息，含具体角色、光锥与时间，可作为抽卡活动线索，但缺少官方一手公告交叉验证，且与已有4.6版本上线事件部分重叠，需进一步核实。",
+      "research_question": "真珠与绯英同期卡池下，玩家如何权衡新角色、复刻角色与光锥投入？调查前先核对媒体转载的官方原公告。",
+      "unknowns": [
+        "官方跃迁公告原文未获取",
+        "具体概率数值未在材料中给出",
+        "转载来源与官方公告是否存在差异"
+      ],
+      "platforms": [
+        "17173"
+      ],
+      "keywords": [
+        "4.6版本",
+        "活动跃迁",
+        "真珠",
+        "绯英",
+        "卡池"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-006",
+          "relation": "same_occurrence",
+          "reason": "该材料直接描述4.6版本活动跃迁（其一）的角色、光锥与时间，是本次卡池事件的核心来源。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "17173转载称4.6版本活动跃迁（其一）于2026年9月28日版本更新后开启，限定5星角色「真珠（欢愉•冰）」与光锥「献给明日的色彩」概率提升，4星角色青雀、雪衣、米沙及多把4星光锥同步UP，持续至2026年11月10日15:00。",
+          "refs": [
+            "SRC-006"
+          ]
+        },
+        {
+          "text": "17173转载称限定5星角色「绯英（欢愉•物理）」与光锥「邂逅于下一个花季」返场，时间为2026年9月28日至2026年10月21日11:59。",
+          "refs": [
+            "SRC-006"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 5,
+          "reason": "卡池涉及新限定5星与返场角色，对抽卡规划有直接影响，但属于版本常规内容，影响范围限于玩家个体。"
+        },
+        "novelty": {
+          "value": 4,
+          "reason": "4.6版本卡池信息在版本更新前后已有前瞻，具体UP组合为新增信息，但整体模式常规。"
+        },
+        "evidence": {
+          "value": 3,
+          "reason": "仅有媒体转载公众号内容，无官方公告原文，证据强度较低。"
+        },
+        "audience": {
+          "value": 6,
+          "reason": "卡池信息直接面向有抽卡需求的玩家，关注度较高。"
+        },
+        "investigability": {
+          "value": 6,
+          "reason": "可通过官方跃迁公告、游戏内详情页等渠道核实角色、光锥与时间。"
+        }
+      },
+      "category": "version",
+      "rights_watch": false,
+      "rights_reason": "卡池信息属于游戏运营常规公示内容，不涉及权利争议。"
+    },
+    {
+      "id": "EVT-002",
+      "title": "玩家批评老角色上场机会少与数值膨胀",
+      "occurrence": "2026年10月5日，一名TapTap玩家发布评论，认为崩铁问题不止数值膨胀，根源之一是老角色上场机会少，除“深渊”外难有发挥空间，价值消耗快导致迭代感强；对比《明日方舟》有矢量突破、肉鸽等玩法让干员持续就业，建议崩铁让老角色多上场以挽回口碑。",
+      "decision": "recommend",
+      "decision_reason": "该评论包含具体日期、明确观点与对比案例，属于可回查的玩家反馈，且涉及老角色就业与膨胀这一持续争议话题，值得进一步调查社区中类似反馈的普遍性与具体诉求。",
+      "research_question": "玩家对老角色上场机会少、价值消耗快导致迭代感强的具体反馈有哪些？除深渊外，玩家期望哪些玩法或机制能让老角色持续就业？",
+      "unknowns": [
+        "该玩家观点是否代表更广泛社区意见未知",
+        "官方是否已回应老角色就业问题未知",
+        "其他玩家是否有类似或相反的具体反馈未知"
+      ],
+      "platforms": [
+        "TapTap"
+      ],
+      "keywords": [
+        "老角色就业",
+        "数值膨胀",
+        "深渊",
+        "玩家反馈"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-002",
+          "relation": "same_occurrence",
+          "reason": "该材料直接记录玩家对老角色上场机会少与膨胀的具体评论，是本次事件的核心来源。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "一名TapTap玩家不推荐运营服务，认为崩铁问题不止数值膨胀，根源之一是老角色上场机会少，除“深渊”外难有发挥空间，价值消耗快导致迭代感强。",
+          "refs": [
+            "SRC-002"
+          ]
+        },
+        {
+          "text": "该玩家对比《明日方舟》有矢量突破、肉鸽等玩法让干员持续就业，建议崩铁让老角色多上场以挽回口碑。",
+          "refs": [
+            "SRC-002"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 5,
+          "reason": "老角色就业与膨胀是玩家长期关注议题，但该评论为个体观点，实际影响范围需进一步观察。"
+        },
+        "novelty": {
+          "value": 5,
+          "reason": "老角色就业讨论并非全新话题，但该评论提出与《明日方舟》的具体对比，具有一定新意。"
+        },
+        "evidence": {
+          "value": 4,
+          "reason": "有明确日期与完整正文，但仅为单一玩家评论，证据强度有限。"
+        },
+        "audience": {
+          "value": 6,
+          "reason": "涉及角色保值与玩法设计，对关注角色强度的玩家有较高吸引力。"
+        },
+        "investigability": {
+          "value": 7,
+          "reason": "可通过TapTap评论区、其他社区平台回查类似反馈，并追踪官方是否回应。"
+        }
+      },
+      "category": "community",
+      "rights_watch": false,
+      "rights_reason": "玩家评论属于主观体验表达，不涉及权利争议。"
+    },
+    {
+      "id": "EVT-005",
+      "title": "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式",
+      "occurrence": "2026年10月2日，一名TapTap玩家发布长评，先肯定清体力、技能演出与角色设计，再批评部分剧情演出、老角色使用空间、配队投入和星启模式体验，并表达降低投入的倾向。这是该玩家的体验与说法，不是已核实的机制结论或整体玩家态度。",
+      "decision": "recommend",
+      "decision_reason": "长评同时包含正面评价、具体不满和投入倾向，可作为研究线索；建议调查哪些关卡与阵容条件下存在类似或相反反馈，不将单篇评价外推为普遍问题。",
+      "research_question": "星启模式与新命途环境下，不同阵容玩家如何评价老角色使用空间及配队投入？哪些反馈可由关卡和阵容条件解释，哪些存在相反案例？",
+      "unknowns": [
+        "该玩家观点是否代表更广泛社区意见未知",
+        "官方是否已回应命途设计与深渊模式批评未知",
+        "其他玩家对星启模式的具体体验未知",
+        "文中配队成本、机制归因和付费计算未经独立核实，不作为事实结论"
+      ],
+      "platforms": [
+        "TapTap"
+      ],
+      "keywords": [
+        "翁法罗斯",
+        "命途设计",
+        "深渊星启",
+        "定价",
+        "老角色淘汰"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-011",
+          "relation": "same_occurrence",
+          "reason": "该材料直接记录玩家对剧情、命途、深渊与定价的长篇具体批评，是本次事件的核心来源。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "一名TapTap玩家肯定清体力轻松、技能动画技术力、角色设计风格与匹诺康尼前剧情，同时批评翁法罗斯3.4后解密冗长、站桩动作、PPT式演出、哲学文案过多。",
+          "refs": [
+            "SRC-011"
+          ]
+        },
+        {
+          "text": "该玩家认为记忆与欢愉命途设计失败、老角色淘汰严重、配队成本升至6-8金、深渊星启模式为三路困难加剧拉踩、定价过高，表示将转为低消费。",
+          "refs": [
+            "SRC-011"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 6,
+          "reason": "长评涉及多个核心系统与运营议题，对关注游戏设计的玩家有较高参考价值。"
+        },
+        "novelty": {
+          "value": 5,
+          "reason": "部分批评在社区中已有讨论，但该玩家将多个议题整合并给出具体版本节点，信息较丰富。"
+        },
+        "evidence": {
+          "value": 5,
+          "reason": "有明确日期与完整长评正文，但为单一玩家主观观点，证据强度中等。"
+        },
+        "audience": {
+          "value": 7,
+          "reason": "涉及命途、深渊与定价等玩家高度关注话题，社区讨论热度可能较高。"
+        },
+        "investigability": {
+          "value": 7,
+          "reason": "可通过TapTap评论区、其他社区平台回查类似反馈，并追踪官方对命途与深渊模式的调整。"
+        }
+      },
+      "category": "community",
+      "rights_watch": false,
+      "rights_reason": "玩家主观长评，不涉及权利争议。"
+    }
+  ],
+  "search_log": [
+    {
+      "query": "崩坏星穹铁道 官方公告 2026年10月",
+      "purpose": "official",
+      "outcome": "返回5条搜索线索，正文尚未读取。"
+    },
+    {
+      "query": "崩坏星穹铁道 2026年10月 活动 更新 玩家讨论",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。"
+    },
+    {
+      "query": "崩坏星穹铁道 2026年10月 攻略 版本内容",
+      "purpose": "media",
+      "outcome": "返回5条搜索线索，正文尚未读取。"
+    },
+    {
+      "query": "崩坏星穹铁道 2026年10月 抽卡 回归 反馈",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。"
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 4.6版本 活动跃迁 真珠 2026年9月28日",
+      "purpose": "official",
+      "outcome": "返回5条具体事件线索。"
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 4.6版本 月升之前 与兽共舞 上线 2026年9月28日",
+      "purpose": "official",
+      "outcome": "返回5条具体事件线索。"
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 乐子神智取米哈游 网页活动 2026年9月30日",
+      "purpose": "official",
+      "outcome": "返回3条具体事件线索。"
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 4.6版本 玩家反馈 抽卡 回归 2026年10月",
+      "purpose": "community",
+      "outcome": "返回0条具体事件线索。",
+      "failure": "the database system is starting up"
+    }
+  ],
+  "limitations": [
+    "这是对话校核的派生研究，不能称为全自动成功；04号失败输入保持原样。",
+    "社区评论只说明个体表达，不能证明机制归因、玩家总体意见或传播规模。",
+    "媒体转载内容未取得官方根公告验证，只作为来源说法。",
+    "未知日期及窗口外材料不当作近期事件根证据。",
+    "当前五维分未做独立标注校准，分数不是风险概率。"
+  ],
+  "review": {
+    "verdict": "保留 12 条材料，归组 3 个事件；推荐 2 个。推荐是研究建议，不代表来源主张已获证实。",
+    "useful": [
+      "4.6版本活动跃迁（其一）开启：真珠与绯英卡池：该材料为媒体转载公众号的卡池信息，含具体角色、光锥与时间，可作为抽卡活动线索，但缺少官方一手公告交叉验证，且与已有4.6版本上线事件部分重叠，需进一步核实。",
+      "玩家批评老角色上场机会少与数值膨胀：该评论包含具体日期、明确观点与对比案例，属于可回查的玩家反馈，且涉及老角色就业与膨胀这一持续争议话题，值得进一步调查社区中类似反馈的普遍性与具体诉求。",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：长评同时包含正面评价、具体不满和投入倾向，可作为研究线索；建议调查哪些关卡与阵容条件下存在类似或相反反馈，不将单篇评价外推为普遍问题。"
+    ],
+    "failures": [
+      "正文片段 8 条；仅摘要 4 条；无法读取 0 条。",
+      "4.6版本活动跃迁（其一）开启：真珠与绯英卡池：官方跃迁公告原文未获取",
+      "4.6版本活动跃迁（其一）开启：真珠与绯英卡池：具体概率数值未在材料中给出",
+      "4.6版本活动跃迁（其一）开启：真珠与绯英卡池：转载来源与官方公告是否存在差异",
+      "玩家批评老角色上场机会少与数值膨胀：该玩家观点是否代表更广泛社区意见未知",
+      "玩家批评老角色上场机会少与数值膨胀：官方是否已回应老角色就业问题未知",
+      "玩家批评老角色上场机会少与数值膨胀：其他玩家是否有类似或相反的具体反馈未知",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：该玩家观点是否代表更广泛社区意见未知",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：官方是否已回应命途设计与深渊模式批评未知",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：其他玩家对星启模式的具体体验未知",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：文中配队成本、机制归因和付费计算未经独立核实，不作为事实结论"
+    ],
+    "next_steps": [
+      "4.6版本活动跃迁（其一）开启：真珠与绯英卡池：真珠与绯英同期卡池下，玩家如何权衡新角色、复刻角色与光锥投入？调查前先核对媒体转载的官方原公告。",
+      "玩家批评老角色上场机会少与数值膨胀：玩家对老角色上场机会少、价值消耗快导致迭代感强的具体反馈有哪些？除深渊外，玩家期望哪些玩法或机制能让老角色持续就业？",
+      "玩家长评批评翁法罗斯剧情、命途设计与深渊星启模式：星启模式与新命途环境下，不同阵容玩家如何评价老角色使用空间及配队投入？哪些反馈可由关卡和阵容条件解释，哪些存在相反案例？"
+    ]
+  }
+}

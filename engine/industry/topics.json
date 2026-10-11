@@ -1,0 +1,13 @@
+{
+  "groups": [
+    {"key":"company","name":"游戏与发行方","blurb":"首轮只研究星穹铁道"},
+    {"key":"field","name":"研究方向","blurb":"版本、资源、角色、剧情与运营"},
+    {"key":"genre","name":"内容形态","blurb":"区分官方信息与社区观点"}
+  ],
+  "topics": [
+    {"slug":"starrail","name":"崩坏：星穹铁道","group":"field","tags":["星穹铁道"],"definition":"可追溯的星铁公开资料与研究线索，不代表玩家总体。"},
+    {"slug":"resources","name":"资源与付费","group":"field","tags":["资源付费"],"definition":"消费选择、资源预算与奖励边界。"},
+    {"slug":"story","name":"剧情与内容","group":"field","tags":["剧情内容"],"definition":"剧情、角色塑造和演出体验。"},
+    {"slug":"operations","name":"运营与权益","group":"field","tags":["运营权益"],"definition":"运营事件、回应和需要核查的权益线索。"}
+  ]
+}

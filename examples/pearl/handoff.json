@@ -1,0 +1,74 @@
+{
+  "schema_version": "starrail-event-handoff-1.0",
+  "event_id": "9a1b0b4c-9d72-41b2-900f-6ae69199cb7f",
+  "title": "真珠的四欢愉收益：体系补强与抽取边界",
+  "game": "崩坏：星穹铁道",
+  "date_range": {
+    "start": "2026-09-28",
+    "end": "2026-09-28"
+  },
+  "summary": "真珠在4.6版本成为可用角色。九月攻略围绕纯四欢愉队的额外回合、循环和生存支持展开，另有作者提醒部分角色仍适合非欢愉组合。",
+  "player_discussion": "讨论现有银狼、绯英等队伍能获得多少补强，缺欢愉成员时是否值得投入，以及是否需要专武改善循环；攻略估算不能直接当玩家共识。",
+  "sources": [
+    {
+      "url": "https://www.taptap.cn/moment/853647340102223589",
+      "platform": "taptap",
+      "content_id": "853647340102223589",
+      "published_at": "2026-09-28",
+      "access": "body",
+      "relation": "same_occurrence"
+    },
+    {
+      "url": "https://www.taptap.cn/moment/853556832101207413",
+      "platform": "taptap",
+      "content_id": "853556832101207413",
+      "published_at": null,
+      "access": "body",
+      "relation": "context"
+    },
+    {
+      "url": "https://www.gematsu.com/2026/09/honkai-star-rail-version-4-6-update-dance-with-the-beast-before-moonrise-launches-september-28",
+      "platform": "www.gematsu.com",
+      "content_id": null,
+      "published_at": "2026-09-20",
+      "access": "body",
+      "relation": "context"
+    },
+    {
+      "url": "https://www.taptap.cn/moment/853326330178046059?group_id=311675",
+      "platform": "taptap",
+      "content_id": "853326330178046059",
+      "published_at": "2026-09-27",
+      "access": "body",
+      "relation": "context"
+    }
+  ],
+  "platforms": [
+    "taptap",
+    "www.gematsu.com"
+  ],
+  "scoring": {
+    "status": "complete",
+    "decision": "recommend",
+    "first": {
+      "reviewer": "deepseek",
+      "total": 57,
+      "decision": "recommend"
+    },
+    "second": {
+      "reviewer": "codex",
+      "total": 67,
+      "decision": "recommend"
+    },
+    "reason": "两次均建议研究，来源资格通过。推荐四欢愉收益与投入边界议题；攻略估算不是玩家共识，也不是经过复现实测的结论。"
+  },
+  "unknowns": [
+    "未复现攻略中的提升百分比或实战配置。",
+    "缺少普通玩家的正反体验样本。",
+    "部分攻略只有修订时间，首发日期未知。"
+  ],
+  "search_terms": [
+    "真珠 强度 四欢愉",
+    "真珠 专武 配队 抽取"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {"id":"radar-official","name":"星穹铁道官网","kind":"external","tier":"T1","config":{},"participation_mode":"editorial","owner_entity_id":"hoyoverse","enabled":false,"site_fulltext":false},
+    {"id":"radar-miyoushe","name":"米游社（须逐帖核对作者身份）","kind":"external","tier":"T2","config":{},"participation_mode":"editorial","enabled":false,"site_fulltext":false},
+    {"id":"radar-taptap","name":"TapTap公开帖子（须逐帖核对作者身份）","kind":"external","tier":"T2","config":{},"participation_mode":"editorial","enabled":false,"site_fulltext":false},
+    {"id":"radar-17173","name":"17173星铁资讯","kind":"external","tier":"T2","config":{},"participation_mode":"editorial","enabled":false,"site_fulltext":false},
+    {"id":"radar-gamersky","name":"游民星空星铁资讯","kind":"external","tier":"T2","config":{},"participation_mode":"editorial","enabled":false,"site_fulltext":false}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "categories": {
+    "EVT-001": "community",
+    "EVT-002": "community",
+    "EVT-003": "community"
+  },
+  "existing_stories": {
+    "EVT-001": "6fdeb198-d81b-4fce-84e7-7ab8acff7949",
+    "EVT-002": "65af1436-7796-4dac-a38c-7929223ec574",
+    "EVT-003": "9c46e52d-f0ff-47ea-b8ae-7852094aacc7"
+  },
+  "existing_relations": {
+    "EVT-001": "same_occurrence",
+    "EVT-002": "same_occurrence",
+    "EVT-003": "same_occurrence"
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "schema_version": "game-event-radar-input-1.0",
+  "run": {
+    "id": "demo-crossover-v010",
+    "game": "崩坏：星穹铁道",
+    "as_of": "2026-10-11",
+    "researcher": "DeepSeek + 游戏事件雷达按需任务",
+    "method": "历史真实研究结果的精选展示；仅重新封装，未重新搜索或评分。",
+    "window_days": 3,
+    "model_api_calls": 1,
+    "model_receipt_ids": [
+      283
+    ],
+    "web_receipt_ids": [
+      263,
+      264,
+      238,
+      265,
+      266,
+      267,
+      268,
+      269,
+      271,
+      272,
+      273,
+      274,
+      276,
+      277,
+      227
+    ],
+    "execution_mode": "manual_backend_api",
+    "derived_on": "2026-10-11",
+    "workflow_version": "6",
+    "discovery_version": "10",
+    "schedule": null,
+    "parent_run_id": "starrail-discovery-20261011-v10",
+    "source_model_api_calls": 7,
+    "original_run_id": "starrail-discovery-20261011-v10-reviewed"
+  },
+  "materials": [
+    {
+      "id": "SRC-001",
+      "title": "报道引用的官方原帖",
+      "url": "https://x.com/ZZZ_EN/status/2108529665098805723",
+      "source_name": "x.com",
+      "source_kind": "official",
+      "origin_group": "ZZZ-HSR-collab-official-20261009",
+      "published_at": "2026-10-09",
+      "observed_on": "2026-10-11",
+      "access": "body",
+      "access_note": "http；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "页面发布日期元信息：2026-10-09T12:07:01.000Z\n发帖\n发帖\nX 上的 Zenless Zone Zero：“Zenless Zone Zero × Honkai: Star Rail Crossover Characters Revealed\nThe Zenless Zone Zero × Honkai: Star Rail crossover officially arrives in Version 3.4! Kafka and Robin are coming to New Eridu to share an unforgettable journey with Proxies everywhere. The show&#x27;s about to begin!”\nZenless Zone Zero\n@ZZZ_EN\nZenless Zone Zero × Honkai: Star Rail Crossover Characters Revealed\nThe Zenless Zone Zero × Honkai: Star Rail crossover officially arrives in Version 3.4! Kafka and Robin are coming to New Eridu to share an unforgettable journey with Proxies everywhere. The show&#x27;s about to begin!\n12:07 · 2026年10月9日·289.1万\n浏览量\n900\n1.5万\n12万\n1.2万",
+      "summary": "《绝区零》官方英文X账号宣布《绝区零》×《崩坏：星穹铁道》联动角色为卡芙卡与知更鸟，联动随3.4版本上线，两人将来到新艾利都。",
+      "decision": "use",
+      "selection_reason": "官方账号原帖，直接给出联动角色与版本信息，是本次事件的一手来源。",
+      "original_url": "https://x.com/ZZZ_EN/status/2108529665098805723",
+      "date_basis": "正文元信息与帖内时间均显示2026-10-09，作为该帖发布日期。",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "source_identity": {
+        "status": "verified",
+        "basis": "已核实账号的原帖地址",
+        "account_url": "https://x.com/ZZZ_EN/status/2108529665098805723"
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-002",
+      "title": "Kafka and Robin will be coming as playable character in ZZZ version 3.4 (Official News)",
+      "url": "https://www.hoyolab.com/article/47024540",
+      "source_name": "www.hoyolab.com",
+      "source_kind": "community",
+      "origin_group": "ZZZ-HSR-collab-official-20261009",
+      "published_at": null,
+      "observed_on": "2026-10-11",
+      "access": "body",
+      "access_note": "tavily；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "ry Clear\nTrending\nCheck in\nMessage Notifications\nLog in to discover more interesting content\nLog in\nPost Details Page\n# Kafka and Robin will be coming as playable character in ZZZ version 3.4 (Official News)\n[](https://www.hoyolab.com/accountCenter?id=8009863)\nSoraHoshina\n1d ago\nFollow\nFrom Zenless Zone Zero Masterlist\n**This is not a leak.** It has been officially revealed by ZZZ official X platform here~\nZenless Zone Zero • Coff Cafe\nRepost allowed\nZZZ x HSR\nZenless Zone Zero Masterlist  2 / 174\n394\n13\n6\n4\n1\n41\n24\n418\n3\n[](about:blank)[](https://www.hoyolab.com/)[](https://www.hoyolab.com/)\n\n[正文分段摘取]\n the contents will be held on TWO sides instead of one (both sides will contain collab events).\n23h ago\nReply\n8\n[](https://www.hoyolab.com/accountCenter?id=185748644)\n_Jay_/\n11F\nAs someone who doesn’t play HSR, what can expect these characters to do?\nRobin gives support energy. Should I expect Kafka to be DPS?\n19h ago\nReply\n6\n[ReinReinya ](https://www.hoyolab.com/accountCenter?id=418586203)\nNah, Robin gives defense class energy, she'll sing and ignore bosses control-skill.\n19h ago\nReply\n1\n[xiao-mian  ](https://www.hoyolab.com/accountCenter?id=31058221)\nRobin screams support. For Kafk",
+      "summary": "HoYoLAB社区帖转述官方X消息，称卡芙卡与知更鸟将在《绝区零》3.4版本成为可玩角色，并称联动内容将在双方游戏内展开；评论区玩家讨论角色定位与剧情去向，多为猜测。",
+      "decision": "watch",
+      "selection_reason": "社区转述官方消息，正文片段含玩家评论与猜测，需与官方原帖对照，不能单独作为事实依据。",
+      "original_url": "https://www.hoyolab.com/article/47024540",
+      "date_basis": "仅有相对时间“1d ago”，无明确发布日期，无法映射到具体日期。",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 276
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-003",
+      "title": "HoYoverse Officially Reveals Characters for Zenless Zone Zero x Honkai Star Rail Collab",
+      "url": "https://fandomwire.com/hoyoverse-reveals-characters-zenless-zone-zero-x-honkai-star-rail-collab",
+      "source_name": "fandomwire.com",
+      "source_kind": "media",
+      "origin_group": "ZZZ-HSR-collab-official-20261009",
+      "published_at": null,
+      "observed_on": "2026-10-11",
+      "access": "body",
+      "access_note": "tavily；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。日期或读取资格不足，程序降为观察。",
+      "excerpt": "Home » Gaming\n# HoYoverse Officially Reveals Characters for Zenless Zone Zero x Honkai Star Rail Collab\n### SUMMARY\n## Get the Latest in Movies, TV, Gaming and More — First!\nJoin 100K+ fans and never miss breaking news, fan theories, trailers and exclusive content.\nHoYoverse has officially revealed the two *Honkai Star Rail* characters coming to *Zenless Zone Zero* as part of the upcoming collab. The Special Program livestream for Version 3.3 just wrapped up on October 9, 2026, and the devs have confirmed that Kafka and Robin will arrive in New Eridu in Version 3.4.\nZenless Zone Zero × Honkai:\n[正文分段摘取]\nn to the Path of Harmony, she is mainly a support who buffs your team’s damage.\nKafka, meanwhile, is one of the most recognisable members of the Stellaron Hunters. Operating under the direction of Elio, she is one of the biggest recurring characters in our journey with the Trailblazer and the Astral Express crew. Her mysterious personality, distinctive voice, and playful nature have made her a fan favorite character.\nHowever, their abilities in *HSR* do not necessarily indicate how they will translate in *ZZZ*. We haven’t gotten any details on their abilities, combat, signature W-Eng",
+      "summary": "媒体报道称HoYoverse在3.3特别节目后确认卡芙卡与知更鸟将随《绝区零》3.4版本加入，预计2026年11月底至12月初上线；同时指出角色在《绝区零》中的技能、战斗、专属音擎等细节尚未公布。",
+      "decision": "watch",
+      "selection_reason": "媒体对官方公布的整理，含版本与大致时间窗口，并明确区分已确认信息与未公布细节。",
+      "original_url": "https://fandomwire.com/hoyoverse-reveals-characters-zenless-zone-zero-x-honkai-star-rail-collab",
+      "date_basis": "正文提及3.3特别节目于2026年10月9日结束，但未给出本文发布日期，故published_at为null。",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 403"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 276
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-004",
+      "title": "3.3 review: HSR collab announcement Zenless Zone Zero",
+      "url": "https://www.hoyolab.com/article/47024990",
+      "source_name": "www.hoyolab.com",
+      "source_kind": "community",
+      "origin_group": "ZZZ-HSR-collab-community-review",
+      "published_at": null,
+      "observed_on": "2026-10-11",
+      "access": "body",
+      "access_note": "firecrawl；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "Post Details Page\n# 3.3 review: HSR collab announcement\n[](https://www.hoyolab.com/accountCenter?id=176868598)\nRetroas\\\\\n1d ago\nFollow\nI fully expected Robin and fine with it. But I kinda hoped they wouldn't go Kafka.\nKafka follows the strings mommy type and we already have 2 ingame. I feel like its too much and we could have had much more interesting options than her. Sparxie or Silverwolf for example. Or even Blade if they wanted an archon of collabs to use.\nIn general, I'm waiting to see shf they will look like. We haven't seen their 3d models, just artwork, but it looks very nice. The only\n[正文分段摘取]\n4\n[](https://www.hoyolab.com/accountCenter?id=495084798)\nalal1999\n2F\n```\nI love Kafka so much.\n```\n1d ago\nReply\n1\n[](https://www.hoyolab.com/accountCenter?id=176868598)Retroas\\\\\n\\\\\n\\\\\n\\\\\nPost Author\n```\nI mean, thats for you, I'm personally not a fan because too many similar characters already exist in ZZZ.\n```\n1d ago\nReply\n0\n[](https://www.hoyolab.com/accountCenter?id=495084798)alal1999 Comments Retroas :\n```\nThe AI translated it incorrectly. I wasn’t asking it to translate it as “I love Kafka so much.” I meant, “I guess not many people like Kafka.”\n```\n1d ago\nReply\n0\nReplies: 3\nTha",
+      "summary": "HoYoLAB作者不希望选择卡芙卡，认为与既有角色类型相似，期待看到3D模型；回复者明确说明“I love Kafka so much”为AI错译，原意是“I guess not many people like Kafka”，不能作为喜爱或支持证据。",
+      "decision": "watch",
+      "selection_reason": "个人评论，保留其限定观点与不同声音，仅代表作者个人看法，不代表玩家总体。",
+      "original_url": "https://www.hoyolab.com/article/47024990",
+      "date_basis": "仅有相对时间“1d ago”，无明确发布日期。",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "not_returned",
+          "receipt_id": 276
+        },
+        {
+          "provider": "firecrawl",
+          "status": "200",
+          "receipt_id": 227
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-005",
+      "title": "Y’all don’t deserve nice things",
+      "url": "https://www.hoyolab.com/article/47028551",
+      "source_name": "www.hoyolab.com",
+      "source_kind": "community",
+      "origin_group": "ZZZ-HSR-collab-community-reaction",
+      "published_at": null,
+      "observed_on": "2026-10-11",
+      "access": "body",
+      "access_note": "tavily；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "ry Clear\nTrending\nCheck in\nMessage Notifications\nLog in to discover more interesting content\nLog in\nPost Details Page\n# Y’all don’t deserve nice things\n[](https://www.hoyolab.com/accountCenter?id=171487353)\nScaphandre\n23h ago\nFollow\nThe HSR x ZZZ collab was supposed to be fun. Two games that are polar opposites crossing over. But ever since the characters got announced I’ve seen some of the most asinine takes from the HSR side regarding Ellen and Astra, especially Ellen. “It’s not a fair trade ZZZ got Robin and Kafka literally the 2 most popular characters in HSR, and we get what? Some random \n[正文分段摘取]\nally good characters from your game. Instead of this pointless slander over the collab picks we should be talking about what really matters: Who would win in a fight Eous or PomPom (Spoilers, it’s Eous lol)\nHonkai: Star Rail • Astral Express\nZenless Zone Zero\nhonkai star rail\ncrossover\nEllen\nAstral Express\n11\n5\n0\n11\n0\n[](about:blank)[](https://www.hoyolab.com/)[](https://www.hoyolab.com/)\nSend\nSearch results will be displayed here~\nAll comments 5\n[](https://www.hoyolab.com/accountCenter?id=480506160)\nMakora1234\n2F\nI like the crossover, but it’s going to upset the balance of power; we",
+      "summary": "HoYoLAB社区帖批评部分《崩坏：星穹铁道》玩家对联动角色选择（尤其艾莲）的负面言论，认为应关注联动本身；评论区有玩家讨论两作战力对比与帕姆。",
+      "decision": "watch",
+      "selection_reason": "个人情绪化评论，含玩家间争论，仅代表作者及评论者个人观点，不代表玩家总体。",
+      "original_url": "https://www.hoyolab.com/article/47028551",
+      "date_basis": "仅有相对时间“23h ago”，无明确发布日期。",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 276
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-006",
+      "title": "即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!",
+      "url": "https://www.bilibili.com/video/BV1Nrpb6EEEH",
+      "source_name": "www.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "ZZZ-HSR-collab-bilibili-20261009",
+      "published_at": "2026-10-09",
+      "observed_on": "2026-10-11",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!\n番剧\n直播\n游戏中心\n会员购\n漫画\n赛事\n投稿\n即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!\n1.5万\n239\n2026-10-09 20:05:38\n未经作者授权，禁止转载\n232\n5\n37\n92\n课程总结\n收起全部章节\n关闭课程总结\n暂无课程总结\n绝区零3.3版本前瞻\n崩坏星穹铁道\n卡芙卡\n绝区零3.3\n绝区零联动崩坏星穹铁道\n联动\n前瞻\n知更鸟\n必剪创作\n绝区零\n喝草莓牛奶的阿罗娜\n发消息\n唔嘿嘿，草莓牛奶……sensei最好了……\n绝区零第三季罗斯凯利法! （21/83）\n41.5万播放\n简介\n订阅合集\n第三季过场动画\n第三季前瞻直播\n绝区零3.0\n绝区零3.1\n绝区零3.2\n第三季过场动画\n第三季前瞻直播\n绝区零3.0\n绝区零3.1\n绝区零3.2\n绝区零第三季3.0版本pv「某个梦游者的自白」\n02:37\n法厄同新衣服和sp形态佩洛伊斯命坐和专武全部白送!上线就送1600石头!绝区零第三季3.0版本的福利资源公布!\n02:00\n法厄同和蕾米埃尔一起共舞!挽昼会分成三个的真相揭晓!罗斯凯利法新夏日皮肤和新卫星来了!/《绝区零》3.1版本「漫长的告别」前瞻版本pv\n02:43\n超大杯的初代虚狩!不占用战场时间却能持续为队伍赋\n[正文分段摘取]\n&绝区零卡妈，有哪些不一样的地方呢？\nKAFKA不卡\n35.8万\n183\n卡妈也来了！崩铁联动绝区零角色终于确定为知更鸟与卡芙卡！\n阿友酱没有酱\n2375\n0\n绝区零联动崩铁的所有结局\n是舟辑啊\n2.5万\n58\n本来以为星铁的卡妈已经很完美了...卧槽！！绝区零牛比！\n王富贵不贵的\n15.9万\n94\n【绝区零x崩铁联动】知更鸟角色展示 | 翎羽化甲\n布衣愚者\n70.9万\n137\n卡芙卡居然同时登陆米家三游，这下厨子可惨喽\n真寰宇说书人\n6.3万\n16\n崩坏星穹铁道艾莲乔实机演示，冰系巡猎角色，登录即可领取，依旧免费战舰                   （虚照）\n欢愉令使-龘龘鸭鸭\n35.8万\n164\n炸裂资讯,卡芙卡也来绝区零世界了！知更鸟+卡芙卡实装在绝区零世界！【星穹铁道x绝区零联动资讯】\n原神高玩专家-向晚\n19.5万\n55\n自由魂看绝区零联动星铁，卡芙卡、知更鸟登场！妈妈来了！塑炼！绝对加大！\nEvan小生\n3555\n0\n🔥《绝区零x星穹铁道》联动知更鸟局内实机建模来了\n是朝晖啊\n3.9万\n110\n得知绝宝那边的联动角色是自己妹妹的周日哥belike：\n很纯滴火花\n14.7万\n29\n绝区零联动崩铁后的角色建模变化\n传说级NPC\n3.2万\n5\n[内鬼慎入]卡芙卡v1实机演示[绝区零崩坏星穹铁道联动]\n_渔舟浅唱_\n1.4万\n2\n🔥《绝区零x星穹铁道",
+      "summary": "B站视频标题称《绝区零》联动《崩坏：星穹铁道》的官方前瞻公布角色为知更鸟与卡芙卡，即将来到新艾利都；页面为视频元数据，含推荐流与相关视频，非正文。",
+      "decision": "watch",
+      "selection_reason": "视频元数据可佐证标题与发布时间，但平台推荐流与相关视频不能作为正文或事实依据。",
+      "original_url": "https://www.bilibili.com/video/BV1Nrpb6EEEH?spm_id_from=333.788.recommend_more_video.1",
+      "date_basis": "视频元数据显示发布时间2026-10-09 20:05:38。",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    },
+    {
+      "id": "SRC-008",
+      "title": "绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片_游戏热门视频",
+      "url": "https://www.bilibili.com/video/BV1Wrpb67EsH",
+      "source_name": "www.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "ZZZ-HSR-collab-bilibili-20261009",
+      "published_at": "2026-10-09",
+      "observed_on": "2026-10-11",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片_游戏热门视频\n番剧\n直播\n游戏中心\n会员购\n漫画\n赛事\n投稿\n绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片\n2.2万\n10\n2026-10-09 20:06:58\n1218\n98\n111\n180\n课程总结\n收起全部章节\n关闭课程总结\n暂无课程总结\n-\n绝区零3.3版本前瞻\n崩坏：星穹铁道\n星穹铁道\n崩坏星穹铁道\n卡芙卡\n重返天空的旅程\n米哈游\n知更鸟\n绝区零\n想抱莉莉娅的云天\n发消息\n活动玩法攻略、剧情流程、测试服及前瞻资讯。橘福福cos。\n",
+      "summary": "B站视频标题为《绝区零》联动《崩坏：星穹铁道》角色卡芙卡、知更鸟前瞻切片；页面为视频元数据，含标签与推荐内容，非正文。",
+      "decision": "watch",
+      "selection_reason": "视频元数据可佐证标题与发布时间，但推荐流与标签不能作为正文或事实依据。",
+      "original_url": "https://www.bilibili.com/video/BV1Wrpb67EsH?spm_id_from=333.788.recommend_more_video.4",
+      "date_basis": "视频元数据显示发布时间2026-10-09 20:06:58。",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "source_identity": {
+        "status": "unverified",
+        "basis": "没有取得可核实的官方作者标识",
+        "account_url": null
+      },
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T19:12:55.005Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-001",
+      "title": "绝区零官方公布与星穹铁道联动角色卡芙卡与知更鸟",
+      "occurrence": "2026年10月9日，绝区零官方英文X账号发布《绝区零》×《崩坏：星穹铁道》联动角色公布，称联动将在3.4版本正式上线，卡芙卡与知更鸟将前往新艾利都。",
+      "decision": "recommend",
+      "decision_reason": "两次均建议研究，来源资格通过。官方发生明确，社区正文有角色选择、定位预期和跨游戏取舍的具体意见，具备分析价值；技能、获取方式、双方同时联动和总体态度尚不能确认。",
+      "research_question": "官方公布的卡芙卡与知更鸟联动，玩家在社区中具体关注哪些玩法细节与角色定位争议？",
+      "unknowns": [
+        "卡芙卡与知更鸟在《绝区零》中的具体技能、战斗定位与专属音擎尚未公布",
+        "联动内容是否在双方游戏内同时展开，官方原帖未明确",
+        "3.4版本具体上线日期未在官方原帖中给出",
+        "一条HoYoLAB回复存在AI翻译纠正，不将原错译作为支持意见；其他个体争论也不代表总体。"
+      ],
+      "platforms": [
+        "X",
+        "HoYoLAB",
+        "Bilibili"
+      ],
+      "keywords": [
+        "绝区零",
+        "崩坏星穹铁道",
+        "联动",
+        "卡芙卡",
+        "知更鸟",
+        "3.4版本"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-001",
+          "relation": "same_occurrence",
+          "reason": "官方英文X账号原帖，直接公布联动角色与3.4版本上线信息，是本次事件的一手来源。"
+        },
+        {
+          "material_id": "SRC-002",
+          "relation": "development",
+          "reason": "HoYoLAB社区帖转述官方X消息，并包含玩家对角色定位与剧情去向的讨论，属于事件在社区中的后续传播与讨论。"
+        },
+        {
+          "material_id": "SRC-003",
+          "relation": "development",
+          "reason": "媒体报道整理官方公布内容，补充版本时间窗口并指出技能等细节未公布，属于事件在媒体侧的后续报道。"
+        },
+        {
+          "material_id": "SRC-004",
+          "relation": "development",
+          "reason": "HoYoLAB社区帖为3.3版本回顾，作者对卡芙卡入选联动表达个人不满，属于事件公布后的玩家个体反馈。"
+        },
+        {
+          "material_id": "SRC-005",
+          "relation": "development",
+          "reason": "HoYoLAB社区帖批评部分玩家对联动角色选择的负面言论，属于事件公布后玩家间争论的个体表达。"
+        },
+        {
+          "material_id": "SRC-006",
+          "relation": "development",
+          "reason": "B站视频标题称官方前瞻公布知更鸟与卡芙卡，发布时间为2026年10月9日，属于事件在视频平台的传播。"
+        },
+        {
+          "material_id": "SRC-008",
+          "relation": "development",
+          "reason": "B站视频标题为联动角色前瞻切片，发布时间为2026年10月9日，属于事件在视频平台的传播。"
+        }
+      ],
+      "confirmed_facts": [
+        {
+          "text": "2026年10月9日，绝区零官方英文X账号发布《绝区零》×《崩坏：星穹铁道》联动角色公布，称联动将在3.4版本正式上线，卡芙卡与知更鸟将前往新艾利都。",
+          "refs": [
+            "SRC-001"
+          ]
+        }
+      ],
+      "source_claims": [
+        {
+          "text": "HoYoLAB社区帖转述官方X消息，称卡芙卡与知更鸟将在《绝区零》3.4版本成为可玩角色，并称联动内容将在双方游戏内展开；评论区玩家讨论角色定位与剧情去向，多为猜测。",
+          "refs": [
+            "SRC-002"
+          ]
+        },
+        {
+          "text": "媒体报道称HoYoverse在3.3特别节目后确认卡芙卡与知更鸟将随《绝区零》3.4版本加入，预计2026年11月底至12月初上线；同时指出角色在《绝区零》中的技能、战斗、专属音擎等细节尚未公布。",
+          "refs": [
+            "SRC-003"
+          ]
+        },
+        {
+          "text": "HoYoLAB社区帖作者对卡芙卡入选联动表示个人不满，认为已有类似角色，更希望是其他角色；同时表示尚未看到3D模型，仅看到美术图。",
+          "refs": [
+            "SRC-004"
+          ]
+        },
+        {
+          "text": "HoYoLAB社区帖批评部分《崩坏：星穹铁道》玩家对联动角色选择（尤其艾莲）的负面言论，认为应关注联动本身；评论区有玩家讨论两作战力对比与帕姆。",
+          "refs": [
+            "SRC-005"
+          ]
+        },
+        {
+          "text": "B站视频标题称《绝区零》联动《崩坏：星穹铁道》的官方前瞻公布角色为知更鸟与卡芙卡，即将来到新艾利都。",
+          "refs": [
+            "SRC-006"
+          ]
+        },
+        {
+          "text": "B站视频标题为《绝区零》联动《崩坏：星穹铁道》角色卡芙卡、知更鸟前瞻切片。",
+          "refs": [
+            "SRC-008"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 7,
+          "reason": "跨游戏角色认同、玩法期待和获取决策具有实质讨论空间，未证实权益损失。"
+        },
+        "novelty": {
+          "value": 6,
+          "reason": "10月9日官方公布，通用轮追到同一事件及其他社区意见；不是新事件，不凭重复报道加分。"
+        },
+        "evidence": {
+          "value": 7,
+          "reason": "官帖原文与时间可查，数篇社区正文包含具体分歧；相对日期、短摘及错译纠正限制仍需明确。"
+        },
+        "audience": {
+          "value": 6,
+          "reason": "两游戏玩家、角色爱好者可讨论角色选择和定位，不推断人数与总体情绪。"
+        },
+        "investigability": {
+          "value": 8,
+          "reason": "有具体对象（卡芙卡、知更鸟、3.4版本）和可回查的官方原帖SRC-001及社区正文SRC-002、SRC-004、SRC-005，可围绕玩法细节与角色定位争议继续调查。"
+        }
+      },
+      "qualification_version": "investigation-v1",
+      "kind": "event",
+      "player_discussion": "玩家讨论集中在卡芙卡与知更鸟在《绝区零》中的定位、是否在双方游戏内展开联动，以及部分玩家对角色选择的不满与争论。",
+      "related_events": [],
+      "dual_score": {
+        "snapshot_hash": "6ec236dfb62ba099fca884d97017459aa4444a64fe4a398696bdea301f53a5a4",
+        "first": {
+          "reviewer": "deepseek",
+          "model": "deepseek-flash",
+          "recorded_at": "2026-10-10T19:15:13.580Z",
+          "receipt_id": 283,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 8,
+              "reason": "官方X原帖（SRC-001）确认跨游戏联动角色与3.4版本上线，涉及两款游戏的角色阵容与版本内容，影响面较大。"
+            },
+            "novelty": {
+              "value": 7,
+              "reason": "SRC-001为官方首次公布联动角色卡芙卡与知更鸟，属新信息；但技能、战斗定位等关键细节未公布（SRC-003）。"
+            },
+            "evidence": {
+              "value": 8,
+              "reason": "SRC-001为官方一手正文，SRC-002、SRC-003、SRC-006、SRC-008为同源转载或转述，不叠加证据；官方原帖本身证据充分。"
+            },
+            "audience": {
+              "value": 7,
+              "reason": "SRC-002、SRC-004、SRC-005显示HoYoLAB玩家讨论角色定位、剧情去向与角色选择争议，SRC-006、SRC-008显示B站传播，玩家相关面较广。"
+            },
+            "investigability": {
+              "value": 8,
+              "reason": "有具体对象（卡芙卡、知更鸟、3.4版本）和可回查的官方原帖SRC-001及社区正文SRC-002、SRC-004、SRC-005，可围绕玩法细节与角色定位争议继续调查。"
+            }
+          },
+          "total": 76,
+          "decision": "recommend",
+          "reason": "符合investigation-v1：有具体对象、可回查官方正文SRC-001与多篇社区正文，玩家问题明确（角色定位、玩法细节、角色选择争议），事实可信度以官方原帖为准，社区猜测另作说明。",
+          "source_refs": [
+            "SRC-001",
+            "SRC-002",
+            "SRC-003",
+            "SRC-004",
+            "SRC-005",
+            "SRC-006",
+            "SRC-008"
+          ]
+        },
+        "second": {
+          "reviewer": "codex",
+          "model": "当前Codex（GPT-6；宿主未暴露具体API模型ID）",
+          "recorded_at": "2026-10-10T19:14:45.446Z",
+          "receipt_id": null,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 7,
+              "reason": "跨游戏角色认同、玩法期待和获取决策具有实质讨论空间，未证实权益损失。"
+            },
+            "novelty": {
+              "value": 6,
+              "reason": "10月9日官方公布，通用轮追到同一事件及其他社区意见；不是新事件，不凭重复报道加分。"
+            },
+            "evidence": {
+              "value": 7,
+              "reason": "官帖原文与时间可查，数篇社区正文包含具体分歧；相对日期、短摘及错译纠正限制仍需明确。"
+            },
+            "audience": {
+              "value": 6,
+              "reason": "两游戏玩家、角色爱好者可讨论角色选择和定位，不推断人数与总体情绪。"
+            },
+            "investigability": {
+              "value": 8,
+              "reason": "官帖、角色、版本和具体社区入口明确，可交接给既有评论研究。"
+            }
+          },
+          "total": 67,
+          "decision": "recommend",
+          "reason": "官方发生明确，社区正文有角色选择、定位预期和跨游戏取舍的具体意见，具备分析价值；技能、获取方式、双方同时联动和总体态度尚不能确认。",
+          "source_refs": [
+            "SRC-001",
+            "SRC-002",
+            "SRC-004",
+            "SRC-005",
+            "SRC-006"
+          ]
+        },
+        "status": "complete",
+        "resolution": {
+          "decision": "recommend",
+          "reason": "两次均建议研究，来源资格通过。官方发生明确，社区正文有角色选择、定位预期和跨游戏取舍的具体意见，具备分析价值；技能、获取方式、双方同时联动和总体态度尚不能确认。"
+        }
+      },
+      "category": "version",
+      "rights_watch": false,
+      "rights_reason": "",
+      "previous_event": {
+        "public_id": "6fdeb198-d81b-4fce-84e7-7ab8acff7949",
+        "relation": "same_occurrence",
+        "reason": "现有事件已记录2026年10月9日绝区零官方公布联动角色卡芙卡与知更鸟，本次材料SRC-001为同一官方原帖，属于同一次发生。"
+      }
+    }
+  ],
+  "material_outcomes": [
+    {
+      "material_id": "SRC-001",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：官方英文X账号原帖，直接公布联动角色与3.4版本上线信息，是本次事件的一手来源。"
+    },
+    {
+      "material_id": "SRC-002",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：HoYoLAB社区帖转述官方X消息，并包含玩家对角色定位与剧情去向的讨论，属于事件在社区中的后续传播与讨论。"
+    },
+    {
+      "material_id": "SRC-003",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：媒体报道整理官方公布内容，补充版本时间窗口并指出技能等细节未公布，属于事件在媒体侧的后续报道。"
+    },
+    {
+      "material_id": "SRC-004",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：HoYoLAB社区帖为3.3版本回顾，作者对卡芙卡入选联动表达个人不满，属于事件公布后的玩家个体反馈。"
+    },
+    {
+      "material_id": "SRC-005",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：HoYoLAB社区帖批评部分玩家对联动角色选择的负面言论，属于事件公布后玩家间争论的个体表达。"
+    },
+    {
+      "material_id": "SRC-006",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：B站视频标题称官方前瞻公布知更鸟与卡芙卡，发布时间为2026年10月9日，属于事件在视频平台的传播。"
+    },
+    {
+      "material_id": "SRC-008",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：B站视频标题为联动角色前瞻切片，发布时间为2026年10月9日，属于事件在视频平台的传播。"
+    }
+  ],
+  "search_log": [],
+  "limitations": [
+    "公开搜索不是全网覆盖或玩家总体抽样；没有连续观测，不输出热度涨幅或舆情预测。",
+    "模型负责语义判断，程序只校验结构、日期候选、引用及分数，不能程序化证明内容真实。",
+    "视频页面只作线索；来源片段可能不完整，未读取部分不做结论。",
+    "研究优先分为试验口径，未进行独立标注校准；不是风险概率。",
+    "同源语言版与转载不视为独立事实证据。"
+  ],
+  "review": {
+    "verdict": "历史精选案例：保留原始证据及两份真实评分，省略整轮私人运行日志。",
+    "next_steps": []
+  }
+}

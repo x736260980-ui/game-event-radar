@@ -1,0 +1,1089 @@
+{
+  "schema_version": "game-event-radar-input-1.0",
+  "run": {
+    "id": "starrail-manual-20261010-v8-reviewed",
+    "game": "崩坏：星穹铁道",
+    "as_of": "2026-10-10",
+    "researcher": "DeepSeek初评 + 当前Codex独立复评",
+    "method": "后台Tavily搜索、普通HTTP读取及Tavily/Firecrawl补救；DeepSeek预筛、归组及五维研究评分；程序校验和计分。",
+    "window_days": 3,
+    "model_api_calls": 0,
+    "model_receipt_ids": [
+      164,
+      172,
+      182,
+      183,
+      184,
+      185
+    ],
+    "web_receipt_ids": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181
+    ],
+    "execution_mode": "manual_backend_api",
+    "derived_on": "2026-10-10",
+    "workflow_version": "6",
+    "discovery_version": "8",
+    "schedule": null,
+    "parent_run_id": "starrail-manual-20261010-v8",
+    "source_model_api_calls": 6,
+    "review_completed_at": "2026-10-10T12:46:25.548Z"
+  },
+  "materials": [
+    {
+      "id": "SRC-001",
+      "title": "商品详情",
+      "url": "https://v.douyin.com/JhH5kNY",
+      "source_name": "v.douyin.com",
+      "source_kind": "community",
+      "origin_group": "SRC-001",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "商品详情",
+      "summary": "抖音商品详情页，正文仅显示“商品详情”，无实质内容。",
+      "decision": "exclude",
+      "selection_reason": "页面为商品详情壳，无游戏相关正文，无法提取事件或玩家反馈。",
+      "original_url": "https://v.douyin.com/JhH5kNY",
+      "date_basis": "无日期候选，正文仅为“商品详情”占位文本，无法确定发布时间",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.394Z"
+    },
+    {
+      "id": "SRC-002",
+      "title": "珍藏流萤，昔涟，阮梅换小白或昔涟 - 崩坏：星穹铁道综合讨论 - TapTap 崩坏：星穹铁道论坛",
+      "url": "https://www.taptap.cn/moment/857377656566448602?group_id=311675",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "SRC-002",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "tavily；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "珍藏流萤，昔涟，阮梅换小白或昔涟 - 崩坏：星穹铁道综合讨论 - TapTap 崩坏：星穹铁道论坛\n下载 App\n[](https://www.taptap.cn/)\nPhigros\n绝区零\n蛋仔派对\n绝区零3.2免费送20抽\n三角洲行动\n伍六七：暗影交锋 测试招募\n我的世界：移动版\n明日方舟\n粒粒的小人国\n三角洲行动\nGameJam 游戏\n初音未来：缤纷舞台\n原神\n王者荣耀\n艾希\n月圆之夜 猎魔人职业攻略\n杀戮尖塔2听劝大改\n光·遇\n潜水员戴夫 国庆折扣活动\n县中校长 从全省倒数到第一\n超自然行动组\nPhigros\n我的世界：移动版\nPhigrim（TapTap测试版）\n我的世界：移动版\n[](https://sight.taptap.cn/)\n下载手机 APP\n下载 PC 版\n[](https://www.taptap.cn/download)\n*   首页\n*   排行榜\n*   今日游戏\n*   云游戏\n*   PC 游戏\n*    发布\n*   社区\n*    我的花园世界\n*    火炬之光：无限\n*    聚光灯游戏创作挑战\n*    霓虹深渊2\n*    诸神皇冠\n*   显示更多\n*   TapTap 制造\n*   创作中 聚光灯 GameJam 10.1-10.20\n*   开发者中心\n*   创作者中心\n*   活动中心\n营业执照 ｜ 沪 ICP 备 16012525 号\n沪网文（2025）0236-071 号\n增值电信业务经营许可证：沪 B2-20170322 B1-20204119\n广播电视节目制作经营许可证：（沪）字第04651号内容安全算法 网信算备310112119986605230015号个性化推送算法 网信算备310112119986602230017号TapSight 智能问答助手算法 网信算备310112119986601240015号\n易玩（上海）网络科技有限公司\n公司地址：上海市静安区灵石路 718 号 B1 北楼\n投诉举报邮箱：kefu@taptap.com\n沪公网安备 31010602009551 号违法信息举报电话：021-60727072 转 3003网上有害信息举报专区上海辟谣专栏\n界面\n反馈\n服务\n余雪\n# 珍藏流萤，昔涟，阮梅换小白或昔涟\n前天 13:52 28 浏览\n有人和我换吗，换的话可以直接加我，ID是142247769\n[](https://www.taptap.cn/app/224267)\n崩坏：星穹铁道\n7.4\n角色扮演冒险策略\n",
+      "summary": "TapTap崩坏：星穹铁道论坛有玩家发帖，称想用珍藏的流萤、昔涟、阮梅换取小白或昔涟，并留下游戏ID，属于个人换号/换角色交易帖。",
+      "decision": "watch",
+      "selection_reason": "为个人交易帖，非官方公告或广泛玩家反馈，仅反映个别玩家换号需求，需注意其个人性质。",
+      "original_url": "https://www.taptap.cn/moment/857377656566448602?group_id=311675",
+      "date_basis": "正文显示“前天 13:52”，但未给出绝对日期，date_candidates为空，无法确定具体发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 177
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-003",
+      "title": "崩铁-哔哩哔哩_bilibili",
+      "url": "https://m.bilibili.com/search?keyword=%E5%B4%A9%E9%93%81",
+      "source_name": "m.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-003",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "崩铁-哔哩哔哩_bilibili\n搜索\n综合排序最多播放最新发布最多弹幕最多收藏\n更多筛选\n全部日期最近一天最近一周最近半年\n全部时长10分钟以下10-30分钟30-60分钟60分钟以上\n分区筛选维护升级中，敬请期待\n4.6版本创作者激励计划\n你，又会给我带来怎样的惊喜呢\n查看详情\n游戏\n崩坏：星穹铁道\n千万下载\n角色扮演/箱庭/二次元，支持Android/PC\n公告：全新4.6版本「月升之前，与兽共舞」现已推出！\n评分8.3分\n游戏热度榜第8名\n官方动态评论 (15.6万条)\n崩坏星穹铁道+ 关注\n1250.6万粉丝 · 332个视频 崩坏：星穹铁道官方账号\n62.9万\n00:46\n「乐子神智取米哈游」第二话 | 面试\n3天前\n85.1万\n00:49\n「乐子神智取米哈游」第一话 | 棋局\n10月2日\n104.3万\n00:32\n乐子神智取米哈游\n9月28日\n267.5万\n08:51\n《崩坏：星穹铁道》真珠角色PV——「如何描绘一种希望」\n9月27日\n369.7万\n12:18\n《崩坏：星穹铁道》即兴巡演PV——「至此，已成艺术」\n9月23日\n114.3万\n09:08\n《崩坏：星穹铁道》走近星穹——「真珠：深度学习中」\n9月22日\n154.7万\n31:24\n《崩坏：星穹铁道》4.6版本「月升之前，与兽共舞」前瞻特别节目\n9月20日\n250.6万\n00:27\n快讯！艾莲与耀嘉音即将登陆星穹列车！\n9月20日\n查看TA的所有稿件\n2.5万\n崩坏：星穹铁道\n种会儿地 8点补崩铁2.5前瞻！\n直播中\n小小桃纸哟\n5.6万177\n05:00\n【崩铁整活】虚照：这问题是不是有点太让人摸不着头脑了！\n没吃药的烦烦 · 8小时前\n4万559\n居然是知更鸟和卡芙卡？！不敢想小绝能把卡妈做到多劲！绝区零3正式官宣绝区零崩铁联动角色为卡芙卡和知更鸟！\n1千点赞\n猪儿姐的杂货铺 · 昨天\n1.9万1\n02:06\n崩铁：“复制终结技”全新时代来了！恭喜拥有星琼的玩家！新人权卡上线\n提瓦特加油站 · 昨天\n1.8万0\n02:14\n崩铁：限定6选1回归！欢愉战舰“打包”上线！恭喜拥有金灵的玩家！满命人权卡上线\n一直没有- · 3天前\n26381\n08:19\n【崩铁】绯英队补金顺序推荐，听我的，低金吃国补差不多了，欢愉体系就像现在的AG五人组！不如把金数给刃鸟！\n爱鹅TV_永不复焉 · 3小时前\n1.4万13\n02:04\n崩铁：4.7前瞻时间确定！恭喜黄泉玩家，喜提全新武器外观！卡芙卡新联动确定！建模大升级\n提瓦特加油站 · 10月6日\n12.3万38\n00:21\n［补］我玩崩铁be like：\n贰階堂希罗 · 8月4日\n9.3万322\n10:40\n【3.3卡池锐评】史上最炸金版本！崩铁联动+挽昼将至，萌新or老玩家怎么抽？\n毕加丶 · 22小时前\n3.5万4\n03:57\n孩子们，崩铁滑跪了!",
+      "summary": "B站“崩铁”搜索结果页，包含官方账号视频列表、推荐视频标题及部分视频发布时间，但页面本身为搜索聚合壳，非单一正文。",
+      "decision": "exclude",
+      "selection_reason": "搜索聚合页，导航与推荐流不构成当前文章正文，无法作为单一事件来源。",
+      "original_url": "https://m.bilibili.com/search?keyword=%E5%B4%A9%E9%93%81&from_source=article",
+      "date_basis": "页面为B站搜索结果页，无明确文章发布日期，date_candidates为空",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-004",
+      "title": "绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片_游戏热门视频",
+      "url": "https://www.bilibili.com/video/BV1Wrpb67EsH",
+      "source_name": "www.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-004",
+      "published_at": "2026-10-09",
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片_游戏热门视频\n番剧\n直播\n游戏中心\n会员购\n漫画\n赛事\n投稿\n绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片\n2.2万\n10\n2026-10-09 20:06:58\n1183\n98\n109\n179\n课程总结\n收起全部章节\n关闭课程总结\n暂无课程总结\n-\n绝区零3.3版本前瞻\n崩坏：星穹铁道\n星穹铁道\n崩坏星穹铁道\n卡芙卡\n重返天空的旅程\n米哈游\n知更鸟\n绝区零\n想抱莉莉娅的云天\n发消息\n活动玩法攻略、剧情流程、测试服及前瞻资讯。橘福福cos。\n接下来播放\n自动连播\n即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!\n喝草莓牛奶的阿罗娜\n1.5万\n239\n炸裂资讯,卡芙卡也来绝区零世界了！知更鸟+卡芙卡实装在绝区零世界！【星穹铁道x绝区零联动资讯】\n原神高玩专家-向晚\n18.9万\n54\n【绝区零/熟肉】妈妈来了！日本主播看绝区零×崩坏：星穹铁道联动知更鸟和卡芙卡\n遗失的足跡\n2.3万\n12\n3.3菲欧妮+赛维里安3套新服装前瞻\n想抱莉莉娅的云天\n2万\n8\n草帽区，你赢了！恶心！当着人家朋友的面！\n真我人之律者爱莉希雅\n8.7万\n4\n6.3侵蚀律者进深渊！被她语音恶心到了！救命！\n想抱莉莉娅的云天\n64.4万\n425\n【7万播cos蕾米】联动角色！游戏内交易！迷宫诡域新赛季！3.3前瞻汇总\n想抱莉莉娅的云天\n2.3万\n16\n绝区零联动立绘对比崩铁原版，感觉这次是水熊赢了\n熊嗝鸽\n17.1万\n67\n如果绝区零联动崩铁，影画合集\n笨蛋星神\n60万\n1015\n彻底炸裂！卡芙卡、知更鸟来绝区零！绝区零3.3前瞻正式官宣绝区零星铁联动角色为卡芙卡和知更鸟！3.4版本上线【绝区零3.3前瞻】\n不当咕咕咕的鸽子\n13.7万\n889\n《绝区零》3.3版本PV | 重返天空的旅程\n绝区零\n85.7万\n2636\n【星与你消失之日】全流程（1080+）（崩坏国记最终章）完结\n想抱莉莉娅的云天\n71.8万\n9961\n【崩铁绝区零联动】对比崩铁建模，卡芙卡和知更鸟绝区零新立绘加了好多小细节！\n虚拟阿璃\n17.6万\n46\n知更鸟和卡芙卡！绝区零前瞻公开星铁联动角色！双厨狂喜了【绝区零3.3前瞻】\n玥小喵Miaow\n6398\n0\n居然是知更鸟和卡芙卡？！不敢想小绝能把卡妈做到多劲！绝区零3正式官宣绝区零崩铁联动角色为卡芙卡和知更鸟！\n猪儿姐的杂货铺\n4万\n559\n爆了，绝区零✘崩铁联动角色公开，登录即领五星代理人知更鸟!\nMyLittleBird\n2.2万\n3\n可爱炸了,菲欧妮双皮肤实装！鞋底甚至都有细节！赛维里安的皮肤时装帅爆了！绝区零3.3新皮肤实机演示\n原神高玩专家-向晚\n14.8万\n58\n得知绝宝那边的联动角色是自己妹妹的周日哥belike：\n很纯滴火花\n11.5万\n23\n惊喜！知更鸟+卡",
+      "summary": "B站视频，标题称绝区零联动星穹铁道角色卡芙卡、知更鸟前瞻切片，页面为视频元数据及推荐列表，未提供官方公告原文。",
+      "decision": "watch",
+      "selection_reason": "视频元数据仅能证明存在该视频，联动信息需以官方公告为准，且推荐流内容不可作为正文。",
+      "original_url": "https://www.bilibili.com/video/BV1Wrpb67EsH",
+      "date_basis": "date_candidates中明确显示视频发布时间2026-10-09 20:06:58",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-005",
+      "title": "汕头·银河次元动漫游戏嘉年华2.0 - 会员购- Bilibili",
+      "url": "https://mall.bilibili.com/neul-next/ticket-renovation/detail.html?id=1006119&msource=cps_showcase_2081054692&noTitleBar=1&track_id=__BGMT__",
+      "source_name": "mall.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-005",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "tavily；video_metadata；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "汕头·银河次元动漫游戏嘉年华2.0\n汕头·银河次元动漫游戏嘉年华2.0 176人想去\n简介\n详情\n热议\n推荐\n¥50 109\n汕头·银河次元动漫游戏嘉年华2.0\n2026.11.14（以现场为准）\n176人想去\n汕头蓝水星欢乐世界\n泰星庄泰星路12号\n位置\n近期汕头想去人数·第1名\n不可退\n可换票\n可转赠\n电子票/兑换票\n去看看\n展演介绍\n活动介绍\n【汕头・银河次元动漫游戏嘉年华 2.0｜官方交流群】1045684865\n时间：11 月 14 日\n场馆：蓝水星欢乐世界\n特邀嘉宾：有事摇铃、时岚 toki、素以等\n进群解锁一手资讯：\n嘉宾现场签售时间表\n漫展通知、购票福利、现场抽奖活动\n寻找游场搭子、摄影约拍、同好交流\n舞台互动 + 线下签售，和老师们集邮合影！我们蓝水星欢乐世界见\n基本信息\n活动日期\n2026-11-14 10:00:00 - 17:00:00\n场馆地址\n广东省 汕头市 龙湖区 汕头蓝水星欢乐世界 汕头蓝水星欢乐世界\n入场说明\n电子票，凭购票二维码验证入场（订单或订单截图无效）\n儿童说明\n全部儿童全票价入场\n入场次数\n单日内蓝水星大门单次进出，银河广场内场可多次进出\n退换说明\n因票品具有稀缺性和时效性的特点，一旦退货将会影响二次销售，此项目不支持退换，请您理解并谨慎购买\n讨论区 (0)\n还没有讨论哦=•ω•=\n发表第一条讨论\n购票须知\n会员购仅作为演出/赛事项目的票务代理方，不承担除法律明确规定外的责任。若您与主办方之间出现争议，会员购将尽力为您协调处理保障您的利益，但无法保证协调结果符合您的期望，会员购无权对争议作出处理。\n会员购在线售票为电子票或纸质票。如您购买的是电子票，入场时请在bilibili APP中的【订单中心】打开电子票检票入场（部分活动需兑换实体票入场）；电子票不得转售，请在正规途径购买；电子票截图无法入场。如您购买的是纸质票，需在购票时填写准确配送信息，纸质票将在活动开始之前寄出，邮费由用户承担；因纸质票的特殊性，遗失不补且无法挂失，请您保管好购买到的票品。\n部分活动不提供现场售票服务，请您提前购买。\n因票品具有稀缺性和时效性的特点，一旦退货将会影响二次销售，票品均不支持七天无理由退票，请您理解并审慎购买。并非所有项目主办方都支持因个人原因发起的退票，具体请以各商品展示页说明信息为准，请您在购买前仔细阅读商品信息。\n若所购项目主办方支持因个人原因退票，您在因个人原因退票时需支付一定比例的手续费，具体比例您可在《bilibili票务服务协议》中查询。\n为保障您的人身安全，主办方在人流高峰可能会采取临时现场限流措施，如对您的正常观展产生影响，敬请谅解。\n若有其他问题请联系客服：客服入口在移动端APP '我的' 个人中心，点击'我的客服'，选择'在线客服'，即可咨询。\n《会员购服务协议》\n温馨提示：本平台仅作为本活动票务销售平台",
+      "summary": "B站会员购页面，展示汕头·银河次元动漫游戏嘉年华2.0的票务信息，活动时间为2026年11月14日，地点汕头蓝水星欢乐世界，与崩坏：星穹铁道无直接关联。",
+      "decision": "exclude",
+      "selection_reason": "为线下漫展票务页面，与崩坏：星穹铁道游戏内容无直接关系。",
+      "original_url": "https://mall.bilibili.com/neul-next/ticket-renovation/detail.html?id=1006119&noTitleBar=1&track_id=__BGMT__&from_spmid=mall.pers-shop.0.0&msource=cps_showcase_2081054692",
+      "date_basis": "页面为漫展票务详情，活动日期为2026-11-14，但无文章发布日期，date_candidates为空",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 177
+        }
+      ],
+      "revised_at": null,
+      "event_time": "2026-11-14",
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-006",
+      "title": "这个游戏最可怕的地方就是整个社区就是剑斗奇谭 ...",
+      "url": "https://ngabbs.com/read.php?tid=47687029",
+      "source_name": "ngabbs.com",
+      "source_kind": "community",
+      "origin_group": "SRC-006",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "firecrawl；article_text；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "(ERROR:15) >加载中 请稍候 …\n如不能自动跳转 可点此链接\n[\\[查看所需的权限/条件\\]](https://ngabbs.com/nuke.php?__lib=view_privilege&__act=view&id=818)\n\\> 你可能需要 [\\[登录\\]](https://ngabbs.com/nuke.php?__lib=login&__act=account&login) 后访问 ...\n\\> 使用APP打开 ...\n\\> 后退 ...\n\\> 返回首页 ...\n\\> https://ngabbs.com/read.php?tid=47687029",
+      "summary": "NGA帖子页面仅显示加载中、权限提示及登录要求，无实质正文内容。",
+      "decision": "exclude",
+      "selection_reason": "页面为权限壳，无法获取正文，不能作为事件来源。",
+      "original_url": "https://ngabbs.com/read.php?tid=47687029",
+      "date_basis": "页面为NGA权限提示页，无发布日期，date_candidates为空",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 403"
+        },
+        {
+          "provider": "tavily",
+          "status": "not_returned",
+          "receipt_id": 177
+        },
+        {
+          "provider": "firecrawl",
+          "status": "403",
+          "receipt_id": 179
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-007",
+      "title": "这些牢角色能打吗😭 - 崩坏：星穹铁道综合讨论 - TapTap 崩坏：星穹铁道论坛",
+      "url": "https://www.taptap.cn/moment/845448289368147896",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "SRC-007",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "tavily；article_text；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "下载 App\n下载手机 APP\n下载 PC 版\n不会玩游戏的BF\n# 这些牢角色能打吗😭\n09/0591 浏览综合\n刷视频感觉崩铁的剧情挺有趣想回坑![[表情_大笑]](https://img-tc.tapimg.com/market/images/926e61cb56225243b1486de286dec918.png)\n但是听说数值膨胀严重![[表情_豹哭]](https://img-tc.tapimg.com/market/images/7a440cbe4c6a7f5ef638d4cd933e4c15.png)\n猜你想搜\n崩坏 星穹铁道 角色强度\n[](/app/224267)\n崩坏：星穹铁道\n7.4\n角色扮演冒险策略\n",
+      "summary": "TapTap崩坏：星穹铁道论坛有玩家发帖，称刷视频觉得崩铁剧情有趣想回坑，但听说数值膨胀严重，询问这些老角色还能不能打，属于个人回坑咨询。",
+      "decision": "watch",
+      "selection_reason": "为个人玩家回坑咨询，反映个别玩家对数值膨胀的顾虑，非官方信息或广泛玩家总体反馈。",
+      "original_url": "https://www.taptap.cn/moment/845448289368147896",
+      "date_basis": "正文显示“09/05”，但未给出年份，date_candidates为空，无法确定具体发布日期",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 177
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-008",
+      "title": "即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!",
+      "url": "https://www.bilibili.com/video/BV1Nrpb6EEEH",
+      "source_name": "www.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-004",
+      "published_at": "2026-10-09",
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!\n番剧\n直播\n游戏中心\n会员购\n漫画\n赛事\n投稿\n即将来到新艾利都的铁道角色是知更鸟和卡芙卡!《绝区零》联动《崩坏:星穹铁道》联动角色官方前瞻公布!\n1.5万\n239\n2026-10-09 20:05:38\n未经作者授权，禁止转载\n232\n5\n37\n92\n课程总结\n收起全部章节\n关闭课程总结\n暂无课程总结\n绝区零3.3版本前瞻\n崩坏星穹铁道\n卡芙卡\n绝区零3.3\n绝区零联动崩坏星穹铁道\n前瞻\n联动\n知更鸟\n必剪创作\n绝区零\n喝草莓牛奶的阿罗娜\n发消息\n唔嘿嘿，草莓牛奶……sensei最好了……\n绝区零第三季罗斯凯利法! （21/83）\n41.4万播放\n简介\n订阅合集\n第三季过场动画\n第三季前瞻直播\n绝区零3.0\n绝区零3.1\n绝区零3.2\n第三季过场动画\n第三季前瞻直播\n绝区零3.0\n绝区零3.1\n绝区零3.2\n绝区零第三季3.0版本pv「某个梦游者的自白」\n02:37\n法厄同新衣服和sp形态佩洛伊斯命坐和专武全部白送!上线就送1600石头!绝区零第三季3.0版本的福利资源公布!\n02:00\n法厄同和蕾米埃尔一起共舞!挽昼会分成三个的真相揭晓!罗斯凯利法新夏日皮肤和新卫星来了!/《绝区零》3.1版本「漫长的告别」前瞻版本pv\n02:43\n超大杯的初代虚狩!不占用战场时间却能持续为队伍赋\n[正文分段摘取]\n来的！菲欧妮和崩铁联动该怎么抉择！【绝区零3.3前瞻】\n悠米_Yuumi\n1.7万\n125\n炸裂资讯,卡芙卡也来绝区零世界了！知更鸟+卡芙卡实装在绝区零世界！【星穹铁道x绝区零联动资讯】\n原神高玩专家-向晚\n18.9万\n54\n联动知更鸟卡芙卡！绝区零玩家看3.3前瞻现状\n企鹅带带北极熊\n32.6万\n479\n彻底疯狂！绝区零免费送联动S级角色？再送新时装+白嫖上百抽！3.3前瞻全汇总！菲欧妮 赛维里安详解！雷米埃尔售后！3.4新角官宣！3.3新增史诗级优化+兑换码！\n游戏大猪猪\n32.2万\n417\n【绝区零x崩铁联动】知更鸟角色展示 | 翎羽化甲\n布衣愚者\n69.6万\n134\n绷铁:星铁联动绝区零把知更鸟和卡芙卡送过去，星铁制作组把我牛了😭😭😭\n氵金龟\n6.5万\n58\n卡妈也来了！崩铁联动绝区零角色终于确定为知更鸟与卡芙卡！\n阿友酱没有酱\n2316\n0\n绝区零联动星穹铁道角色：卡芙卡、知更鸟前瞻切片\n想抱莉莉娅的云天\n2.2万\n10\n快讯！艾莲与耀嘉音即将登陆星穹列车！\n崩坏星穹铁道\n250.6万\n8400\n孩子们，绝区零联动剧情图已泄密!\nSilverwolfLV1000\n2.4万\n5\n【绝区零3.3前瞻】根本没有这样的邦布！联动卡芙卡和知更鸟！菲欧妮水手服！\n卡特亚\n24.6万\n357\n【绝区零】3.3前瞻全汇总！压力最大1集！联动角色确认！维琳娜复刻+",
+      "summary": "B站视频，标题称绝区零联动崩坏：星穹铁道角色官方前瞻公布，联动角色为知更鸟和卡芙卡，页面为视频元数据及推荐列表，未提供官方公告原文。",
+      "decision": "watch",
+      "selection_reason": "视频元数据仅能证明存在该视频，联动信息需以官方公告为准，且推荐流内容不可作为正文。",
+      "original_url": "https://www.bilibili.com/video/BV1Nrpb6EEEH?spm_id_from=333.788.recommend_more_video.1",
+      "date_basis": "date_candidates中明确显示视频发布时间2026-10-09 20:05:38",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:20.395Z"
+    },
+    {
+      "id": "SRC-009",
+      "title": "东莞·莞漫次元动漫游戏嘉年华 - 会员购",
+      "url": "https://mall.bilibili.com/neul-next/ticket-renovation/detail.html?id=1006389&msource=cps_showcase_2081054692&noTitleBar=1&track_id=__BGMT__",
+      "source_name": "mall.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-009",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "tavily；video_metadata；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "东莞·莞漫次元动漫游戏嘉年华\n东莞·莞漫次元动漫游戏嘉年华\n简介\n详情\n热议\n推荐\n¥50 109\n东莞·莞漫次元动漫游戏嘉年华\n2026.11.21（以现场为准）\n39人想去\n米乐城\n家具大道东1号之一\n位置\n近期东莞想去人数·第2名\n不可退\n可换票\n可转赠\n电子票/兑换票\n去看看\n展演介绍\n活动介绍\n【东莞・莞漫次元动漫游戏嘉年华｜官方交流群】1124217828\n时间：11月 21日\n地点：东莞地铁1号线展览中心站D出口米乐城\n特邀嘉宾：氢化物、玲珑不吃柠檬等\n进群福利 & 信息：\n第一时间获取嘉宾舞台、签售时间表\n漫展通知、现场活动抢先看\n寻找游场搭子、摄影约拍、同好交流\n国庆次元集结！现场集邮、嘉宾面基合影，我们米乐城见\n查看全部\n基本信息\n活动日期\n2026-11-21 10:00:00 - 17:00:00\n场馆地址\n广东省 东莞市 东莞市 米乐城 米乐城\n入场说明\n电子票，凭购票二维码验证入场（订单或订单截图无效）\n儿童说明\n全部儿童全票价入场\n入场次数\n单场票，单日多次入场有效\n退换说明\n因票品具有稀缺性和时效性的特点，一旦退货将会影响二次销售，此项目不支持退换，请您理解并谨慎购买\n讨论区 (1)\n发表评论\nnnmmnnmjk\n3天前\n生活不易玲珑炒饭\n查看全部讨论\n购票须知\n会员购仅作为演出/赛事项目的票务代理方，不承担除法律明确规定外的责任。若您与主办方之间出现争议，会员购将尽力为您协调处理保障您的利益，但无法保证协调结果符合您的期望，会员购无权对争议作出处理。\n会员购在线售票为电子票或纸质票。如您购买的是电子票，入场时请在bilibili APP中的【订单中心】打开电子票检票入场（部分活动需兑换实体票入场）；电子票不得转售，请在正规途径购买；电子票截图无法入场。如您购买的是纸质票，需在购票时填写准确配送信息，纸质票将在活动开始之前寄出，邮费由用户承担；因纸质票的特殊性，遗失不补且无法挂失，请您保管好购买到的票品。\n部分活动不提供现场售票服务，请您提前购买。\n因票品具有稀缺性和时效性的特点，一旦退货将会影响二次销售，票品均不支持七天无理由退票，请您理解并审慎购买。并非所有项目主办方都支持因个人原因发起的退票，具体请以各商品展示页说明信息为准，请您在购买前仔细阅读商品信息。\n若所购项目主办方支持因个人原因退票，您在因个人原因退票时需支付一定比例的手续费，具体比例您可在《bilibili票务服务协议》中查询。\n为保障您的人身安全，主办方在人流高峰可能会采取临时现场限流措施，如对您的正常观展产生影响，敬请谅解。\n若有其他问题请联系客服：客服入口在移动端APP '我的' 个人中心，点击'我的客服'，选择'在线客服'，即可咨询。\n《会员购服务协议》\n看看其他\njellycat可爱玩偶集(害羞乳白兔)\n券后价¥2\n哔哩哔哩电竞 BLG无畏契约 小动",
+      "summary": "B站会员购页面展示东莞·莞漫次元动漫游戏嘉年华票务信息，活动日期2026年11月21日10:00-17:00，地点东莞米乐城，票价39元预售早鸟普通票、50元预售普通票，含嘉宾、交流群等介绍。内容为线下漫展票务，与《崩坏：星穹铁道》无直接关联。",
+      "decision": "exclude",
+      "selection_reason": "内容为动漫游戏嘉年华票务，未涉及崩坏：星穹铁道具体玩家反馈或游戏事件，与目标游戏无关。",
+      "original_url": "https://mall.bilibili.com/neul-next/ticket-renovation/detail.html?id=1006389&noTitleBar=1&track_id=__BGMT__&from_spmid=mall.pers-shop.0.0&msource=cps_showcase_2081054692",
+      "date_basis": "页面为票务详情，date_candidates为空；活动日期2026-11-21为活动时间，非文章发布日期，故published_at未知填null",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 177
+        }
+      ],
+      "revised_at": null,
+      "event_time": "2026-11-21",
+      "discovered_at": "2026-10-10T12:42:24.461Z"
+    },
+    {
+      "id": "SRC-010",
+      "title": "10大裤衩怎么配队NGA玩家社区",
+      "url": "https://ngabbs.com/read.php?tid=47689345",
+      "source_name": "ngabbs.com",
+      "source_kind": "community",
+      "origin_group": "SRC-010",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "firecrawl；article_text；模型正文边界=shell。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "(ERROR:15) >加载中 请稍候 …\n如不能自动跳转 可点此链接\n[\\[查看所需的权限/条件\\]](https://ngabbs.com/nuke.php?__lib=view_privilege&__act=view&id=818)\n\\> 你可能需要 [\\[登录\\]](https://ngabbs.com/nuke.php?__lib=login&__act=account&login) 后访问 ...\n\\> 使用APP打开 ...\n\\> 后退 ...\n\\> 返回首页 ...\n\\> https://ngabbs.com/read.php?tid=47689345",
+      "summary": "NGA帖子页面因权限或加载问题未显示正文，仅剩标题“10大裤衩怎么配队NGA玩家社区”及跳转提示，无法获取具体配队讨论内容。",
+      "decision": "exclude",
+      "selection_reason": "正文缺失，仅有标题和加载提示，无法判断具体玩家反馈或事件，不构成可用材料。",
+      "original_url": "https://ngabbs.com/read.php?tid=47689345",
+      "date_basis": "页面仅显示加载中与权限提示，无正文内容，date_candidates为空，发布日期未知",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 403"
+        },
+        {
+          "provider": "tavily",
+          "status": "not_returned",
+          "receipt_id": 178
+        },
+        {
+          "provider": "firecrawl",
+          "status": "403",
+          "receipt_id": 180
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:24.461Z"
+    },
+    {
+      "id": "SRC-011",
+      "title": "冒头 - 崩坏：星穹铁道跃迁祈愿 - TapTap 崩坏：星穹铁道论坛",
+      "url": "https://www.taptap.cn/moment/844330099749687110",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "SRC-011",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "search_excerpt；unavailable；模型正文边界=body。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "下载 App\n下载手机 APP\n下载 PC 版\n发湖北\n发湖北逆风如解意\n冒头 1\n# 冒头\n09/027 浏览跃迁祈愿\n崩坏：星穹铁道icon\n崩坏：星穹铁道\n7.4\n角色扮演冒险策略\n前往论坛\n崩坏：星穹铁道 封面\n崩坏：星穹铁道\n7.4\n角色扮演冒险策略\n去论坛查看游戏\n这是你游最强势的体系队，拿去上分截图\n这是你游最强势的体系队，拿去上分\n#星穹铁道强度图#噗噜噜实验室#星穹铁道强度\n@川页\n5 赞\n6 回复[新虚构12w分配队参考截图\n新虚构12w分配队参考\n如图所示，全自动挂机配队参考 第一队：4金追击队 0+0水砂、1+0提宝、0+0盾丹、0+0不死途 第二队：7金狼尊队 2+1狼尊、1+1爻光、0+0嚯嚯、欢愉主 第三队：13金记忆战舰 2+1遐蝶、1+0长夜月、2+1风堇、2+0昔涟 没有什么配轴和操作，正常练度然后点自动挂机即可满分[表情\\_比心]\n@橘子皮泡点水喝\n3 赞\n3 回复](/moment/848545233405742993)对不起阿哈！崩铁真珠首日流水截图\n对不起阿哈！崩铁真珠首日流水\n《崩坏：星穹铁道》4.6版本首日流水情况，总榜畅销与游戏畅销双双前列 由上海米哈游网络科技股份有限公司自研的回合制RPG《崩坏：星穹铁道》，于9月28日正式上线4.6版本「月升之前，与兽共舞」。新版本推出全新五星角色「真珠」与限定五星光锥「献给明日的色彩」，上半卡池复刻「绯英」，下半复刻「千冶·刃」。 根据第三方平台七麦数据显示，9月28日游戏在总榜畅销排名登顶第9，游戏畅销榜位列第3，冒险榜与\n@",
+      "summary": "TapTap论坛帖子聚合多条玩家内容：一条称某体系队为“最强势体系队”并附截图；一条给出新虚构12w分配队参考，列出三队金数与角色配置并称全自动挂机可满分；另一条提及4.6版本首日流水，称9月28日上线4.6版本「月升之前，与兽共舞」，新五星角色「真珠」与限定光锥，并引用第三方平台排名。内容为玩家配队分享与流水讨论，含个人观点。",
+      "decision": "watch",
+      "selection_reason": "包含具体玩家配队反馈与版本流水讨论，但为个人评论和转载数据，需保留限定，且部分内容为推荐流聚合，需谨慎对待。",
+      "original_url": "https://www.taptap.cn/moment/844330099749687110",
+      "date_basis": "页面显示“09/02”等时间碎片，但未明确为文章发布日期，date_candidates为空，故published_at未知填null",
+      "content_kind": "article_text",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        },
+        {
+          "provider": "tavily",
+          "status": "returned_text",
+          "receipt_id": 178
+        },
+        {
+          "provider": "firecrawl",
+          "status": "200",
+          "receipt_id": 181
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:24.461Z"
+    },
+    {
+      "id": "SRC-012",
+      "title": "崩坏星穹铁道的动态 - 哔哩哔哩",
+      "url": "https://www.bilibili.com/opus/1191724577781186576",
+      "source_name": "www.bilibili.com",
+      "source_kind": "community",
+      "origin_group": "SRC-012",
+      "published_at": "2026-04-16",
+      "observed_on": "2026-10-10",
+      "access": "excerpt_only",
+      "access_note": "http；video_metadata；模型正文边界=metadata。仅保留相关片段，不是全文或视频转写。",
+      "excerpt": "崩坏星穹铁道的动态 - 哔哩哔哩\n崩坏星穹铁道\n编辑于 2026年04月16日 11:50\n#崩坏星穹铁道#​ #如是众生欢笑不已#​ 「如是，众生欢笑不已」4.2版本速览\n开拓者好呀！帕姆带来了4.2版本中的新内容速览帕~快来看看都有什么帕！\n长图\n长图\n长图\n收起\n查看大图\n向左旋转\n向右旋转\n崩坏：星穹铁道\n游戏\n角色扮演/箱庭/二次元\n全新4.6版本「月升之前，与兽共舞」现已推出！\n进入\n给UP主投上硬币\n1硬币\n2硬币\n确定 经验值+10（今日0/50）",
+      "summary": "B站崩坏星穹铁道官方动态发布「如是，众生欢笑不已」4.2版本速览，含长图，页面同时显示全新4.6版本「月升之前，与兽共舞」已推出。内容为官方版本速览，但正文以长图形式呈现，文字片段未包含具体版本内容。",
+      "decision": "watch",
+      "selection_reason": "为官方版本速览动态，但正文为长图，文字片段仅含标题与版本名称，缺乏具体可核验内容，需结合原图进一步确认。",
+      "original_url": "https://www.bilibili.com/opus/1191724577781186576",
+      "date_basis": "页面明确标注“编辑于 2026年04月16日 11:50”，date_candidates中day为2026-04-16，故published_at取该日期",
+      "content_kind": "video_metadata",
+      "reading_trace": [
+        {
+          "provider": "http",
+          "status": "HTTP 200"
+        }
+      ],
+      "revised_at": null,
+      "event_time": null,
+      "discovered_at": "2026-10-10T12:42:24.461Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-001",
+      "title": "社区视频称绝区零3.3前瞻公布联动星铁角色知更鸟与卡芙卡",
+      "occurrence": "2026年10月9日，B站出现多条视频，标题称《绝区零》3.3版本前瞻公布与《崩坏：星穹铁道》的联动角色为知更鸟和卡芙卡，并称即将来到新艾利都；相关页面为视频元数据与推荐列表，未提供官方公告原文。",
+      "decision": "watch",
+      "decision_reason": "两次判断为观察，或推荐所需来源尚不足。保留联动线索；不得将视频标题所称官宣直接写成官方事实，待核实原前瞻。",
+      "research_question": "《绝区零》3.3前瞻是否正式公布了与《崩坏：星穹铁道》的联动角色知更鸟与卡芙卡？",
+      "unknowns": [
+        "官方前瞻直播或公告原文未获取",
+        "联动角色实装时间与获取方式未确认",
+        "视频标题所述内容是否与官方一致未核实"
+      ],
+      "platforms": [
+        "bilibili"
+      ],
+      "keywords": [
+        "绝区零",
+        "联动",
+        "知更鸟",
+        "卡芙卡",
+        "3.3前瞻"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-004",
+          "relation": "same_occurrence",
+          "reason": "标题称绝区零联动星铁角色卡芙卡、知更鸟前瞻切片，发布时间2026-10-09，是同一联动传闻的社区视频来源。"
+        },
+        {
+          "material_id": "SRC-008",
+          "relation": "same_occurrence",
+          "reason": "标题称绝区零联动崩坏星穹铁道角色官方前瞻公布，联动角色为知更鸟和卡芙卡，与SRC-004同属origin_group SRC-004，为同源转载。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "社区视频标题称《绝区零》3.3前瞻公布与《崩坏：星穹铁道》联动角色为知更鸟和卡芙卡。",
+          "refs": [
+            "SRC-004",
+            "SRC-008"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 5,
+          "reason": "若联动角色属实，涉及绝区零3.3版本卡池与玩家抽卡决策，但当前仅有社区视频标题，无法确认实际玩法权益范围。"
+        },
+        "novelty": {
+          "value": 4,
+          "reason": "联动传闻本身在社区已有讨论，但具体角色知更鸟与卡芙卡及3.3前瞻时间点提供了新的具体指向。"
+        },
+        "evidence": {
+          "value": 2,
+          "reason": "仅两条同源社区视频元数据，origin_group相同，无官方公告原文，单帖只能支持个体说法。"
+        },
+        "audience": {
+          "value": 6,
+          "reason": "联动涉及两个游戏玩家群体的抽卡与角色获取决策，相关面较广，但当前仅为传闻阶段。"
+        },
+        "investigability": {
+          "value": 5,
+          "reason": "可通过官方前瞻直播或公告回查是否公布联动角色，但当前缺原文，需等待官方信息。"
+        }
+      },
+      "qualification_version": "investigation-v1",
+      "kind": "event",
+      "player_discussion": "社区视频标题与推荐流中出现对知更鸟、卡芙卡联动绝区零的讨论，但正文未提供官方公告原文。",
+      "related_events": [],
+      "dual_score": {
+        "snapshot_hash": "d636c78fbaaf77269a0cf96dea5310d532b3750563689b78411ab181d86d73b1",
+        "first": {
+          "reviewer": "deepseek",
+          "model": "deepseek-flash",
+          "recorded_at": "2026-10-10T12:42:39.560Z",
+          "receipt_id": 185,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 5,
+              "reason": "若联动角色属实，涉及绝区零3.3版本卡池与玩家抽卡决策，但当前仅有社区视频标题，无法确认实际玩法权益范围。"
+            },
+            "novelty": {
+              "value": 4,
+              "reason": "联动传闻本身在社区已有讨论，但具体角色知更鸟与卡芙卡及3.3前瞻时间点提供了新的具体指向。"
+            },
+            "evidence": {
+              "value": 2,
+              "reason": "仅两条同源社区视频元数据，origin_group相同，无官方公告原文，单帖只能支持个体说法。"
+            },
+            "audience": {
+              "value": 6,
+              "reason": "联动涉及两个游戏玩家群体的抽卡与角色获取决策，相关面较广，但当前仅为传闻阶段。"
+            },
+            "investigability": {
+              "value": 5,
+              "reason": "可通过官方前瞻直播或公告回查是否公布联动角色，但当前缺原文，需等待官方信息。"
+            }
+          },
+          "total": 44,
+          "decision": "watch",
+          "reason": "有具体对象和可回查方向，但证据仅为同源社区视频标题，缺官方原文，事实未证实，建议观察官方公告。",
+          "source_refs": [
+            "SRC-004",
+            "SRC-008"
+          ]
+        },
+        "second": {
+          "reviewer": "codex",
+          "model": "Codex 当前对话（宿主未暴露精确模型标识）",
+          "recorded_at": "2026-10-10T12:46:04.507Z",
+          "receipt_id": null,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 6,
+              "reason": "若联动成立会影响角色期待，但现有内容只到视频标题。"
+            },
+            "novelty": {
+              "value": 5,
+              "reason": "近期有具体角色与前瞻对象，仍缺原公告。"
+            },
+            "evidence": {
+              "value": 2,
+              "reason": "两页视频元信息，同源且含推荐流，未读官方正文。"
+            },
+            "audience": {
+              "value": 6,
+              "reason": "触及角色期待与获取方式，无法判断实际讨论规模。"
+            },
+            "investigability": {
+              "value": 5,
+              "reason": "可回查视频入口，但缺具体原文与已核实玩家问题。"
+            }
+          },
+          "total": 49,
+          "decision": "watch",
+          "reason": "保留联动线索；不得将视频标题所称官宣直接写成官方事实，待核实原前瞻。",
+          "source_refs": [
+            "SRC-004",
+            "SRC-008"
+          ]
+        },
+        "status": "complete",
+        "resolution": {
+          "decision": "watch",
+          "reason": "两次判断为观察，或推荐所需来源尚不足。保留联动线索；不得将视频标题所称官宣直接写成官方事实，待核实原前瞻。"
+        }
+      },
+      "category": "community",
+      "rights_watch": false,
+      "rights_reason": "",
+      "previous_event": null
+    },
+    {
+      "id": "EVT-002",
+      "title": "玩家发帖询问老角色回坑是否还能打并提及数值膨胀顾虑",
+      "occurrence": "TapTap崩坏：星穹铁道论坛有玩家发帖，称刷视频觉得崩铁剧情有趣想回坑，但听说数值膨胀严重，询问这些老角色还能不能打，属于个人回坑咨询。",
+      "decision": "watch",
+      "decision_reason": "两次判断为观察，或推荐所需来源尚不足。这是日期未确认的回坑咨询，不作为10月近期新事件或整体数值膨胀证据。",
+      "research_question": "回坑玩家对老角色在数值膨胀环境下的可用性存在哪些具体顾虑？",
+      "unknowns": [
+        "帖子未列出具体老角色名单",
+        "未说明所指数值膨胀的具体版本或玩法场景",
+        "发帖时间未显示完整日期"
+      ],
+      "platforms": [
+        "TapTap"
+      ],
+      "keywords": [
+        "回坑",
+        "数值膨胀",
+        "老角色",
+        "角色强度"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-007",
+          "relation": "same_occurrence",
+          "reason": "帖子正文为玩家个人回坑咨询，询问老角色是否还能打并提及数值膨胀顾虑，是同一具体发帖。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "一名TapTap玩家发帖称想回坑，但听说数值膨胀严重，询问老角色还能不能打。",
+          "refs": [
+            "SRC-007"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 3,
+          "reason": "单名玩家回坑咨询，涉及老角色可用性，但未列出具体角色与场景，影响范围有限。"
+        },
+        "novelty": {
+          "value": 3,
+          "reason": "数值膨胀与老角色回坑是常见议题，该帖为个人咨询，未提供新具体信息。"
+        },
+        "evidence": {
+          "value": 3,
+          "reason": "单篇TapTap帖子正文可回查，但仅支持个体说法，发帖时间不完整。"
+        },
+        "audience": {
+          "value": 4,
+          "reason": "回坑玩家对老角色可用性的顾虑是具体体验切面，但当前仅一名玩家表达。"
+        },
+        "investigability": {
+          "value": 4,
+          "reason": "可回查帖子原文，但缺具体角色名单与版本场景，调查入口有限。"
+        }
+      },
+      "qualification_version": "investigation-v1",
+      "kind": "event",
+      "player_discussion": "一名玩家发帖表达回坑意愿，同时担心数值膨胀导致老角色无法使用。",
+      "related_events": [
+        {
+          "title": "玩家批评老角色上场机会少与数值膨胀",
+          "relation": "同属老角色可用性与数值膨胀议题，但该帖为个人回坑咨询，非同一具体事件。",
+          "refs": [
+            "SRC-007"
+          ]
+        }
+      ],
+      "dual_score": {
+        "snapshot_hash": "eaff4cbaa9d2f42c729a34a0179bd7d82f6f40fcf18853518a1da582cc8c1d8c",
+        "first": {
+          "reviewer": "deepseek",
+          "model": "deepseek-flash",
+          "recorded_at": "2026-10-10T12:42:39.560Z",
+          "receipt_id": 185,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 3,
+              "reason": "单名玩家回坑咨询，涉及老角色可用性，但未列出具体角色与场景，影响范围有限。"
+            },
+            "novelty": {
+              "value": 3,
+              "reason": "数值膨胀与老角色回坑是常见议题，该帖为个人咨询，未提供新具体信息。"
+            },
+            "evidence": {
+              "value": 3,
+              "reason": "单篇TapTap帖子正文可回查，但仅支持个体说法，发帖时间不完整。"
+            },
+            "audience": {
+              "value": 4,
+              "reason": "回坑玩家对老角色可用性的顾虑是具体体验切面，但当前仅一名玩家表达。"
+            },
+            "investigability": {
+              "value": 4,
+              "reason": "可回查帖子原文，但缺具体角色名单与版本场景，调查入口有限。"
+            }
+          },
+          "total": 33,
+          "decision": "watch",
+          "reason": "有具体玩家问题和可回查正文，但单帖仅支持个体说法，缺具体角色与场景，建议观察是否有更多玩家反馈。",
+          "source_refs": [
+            "SRC-007"
+          ]
+        },
+        "second": {
+          "reviewer": "codex",
+          "model": "Codex 当前对话（宿主未暴露精确模型标识）",
+          "recorded_at": "2026-10-10T12:46:04.507Z",
+          "receipt_id": null,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 4,
+              "reason": "回坑顾虑有体验价值，但没有具体阵容和玩法。"
+            },
+            "novelty": {
+              "value": 3,
+              "reason": "单条咨询，没有近期变化或明确新发生。"
+            },
+            "evidence": {
+              "value": 3,
+              "reason": "正文可读但只有09/05，不能证明属于近三天。"
+            },
+            "audience": {
+              "value": 5,
+              "reason": "涉及回坑和旧角色可用性，但范围含糊。"
+            },
+            "investigability": {
+              "value": 4,
+              "reason": "缺具体角色名单与玩法，需要补证后才能形成明确选题。"
+            }
+          },
+          "total": 38,
+          "decision": "watch",
+          "reason": "这是日期未确认的回坑咨询，不作为10月近期新事件或整体数值膨胀证据。",
+          "source_refs": [
+            "SRC-007"
+          ]
+        },
+        "status": "complete",
+        "resolution": {
+          "decision": "watch",
+          "reason": "两次判断为观察，或推荐所需来源尚不足。这是日期未确认的回坑咨询，不作为10月近期新事件或整体数值膨胀证据。"
+        }
+      },
+      "category": "community",
+      "rights_watch": false,
+      "rights_reason": "",
+      "previous_event": null
+    },
+    {
+      "id": "EVT-003",
+      "title": "TapTap帖子聚合玩家配队分享与4.6首日流水讨论",
+      "occurrence": "TapTap崩坏：星穹铁道跃迁祈愿版块帖子聚合多条玩家内容：一条称某体系队为最强势体系队并附截图；一条给出新虚构12w分配队参考，列出三队金数与角色配置并称全自动挂机可满分；另一条提及4.6版本首日流水，称9月28日上线4.6版本「月升之前，与兽共舞」，新五星角色「真珠」与限定光锥，并引用第三方平台排名。",
+      "decision": "watch",
+      "decision_reason": "两次判断不同：DeepSeek为watch，Codex为drop；暂列观察。排除本次拼接事件：模型把推荐列表中的配队与流水内容当成当前帖子，保留错误供修正和回查。",
+      "research_question": "玩家分享的新虚构12w分配队参考与4.6首日流水讨论中，有哪些具体配队配置和流水数据可回查？",
+      "unknowns": [
+        "帖子中配队参考的实战有效性未验证",
+        "流水数据引用第三方平台，未提供原始链接",
+        "帖子发布时间未显示完整日期"
+      ],
+      "platforms": [
+        "TapTap"
+      ],
+      "keywords": [
+        "配队",
+        "虚构叙事",
+        "4.6版本",
+        "真珠",
+        "流水"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-011",
+          "relation": "same_occurrence",
+          "reason": "帖子正文聚合了玩家配队分享与4.6首日流水讨论，是同一帖子内的多条玩家内容。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "一名TapTap玩家分享新虚构12w分配队参考，列出三队金数与角色配置，并称全自动挂机可满分。",
+          "refs": [
+            "SRC-011"
+          ]
+        },
+        {
+          "text": "一名TapTap玩家称4.6版本首日流水总榜畅销与游戏畅销双双前列，并引用第三方平台七麦数据排名。",
+          "refs": [
+            "SRC-011"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 1,
+          "reason": "当前摘要混合其他推荐帖，不能确认本帖有相应事件。"
+        },
+        "novelty": {
+          "value": 1,
+          "reason": "配队和流水属于不同话题，不能拼成一次发生。"
+        },
+        "evidence": {
+          "value": 1,
+          "reason": "仅搜索摘录且含推荐流，原帖标题冒头，不能支持合成正文。"
+        },
+        "audience": {
+          "value": 2,
+          "reason": "潜在主题有关游戏，但与此材料根正文关系未建立。"
+        },
+        "investigability": {
+          "value": 2,
+          "reason": "应先找到被引用原帖；当前聚合事件不合格。"
+        }
+      },
+      "qualification_version": "investigation-v1",
+      "kind": "event",
+      "player_discussion": "玩家在TapTap帖子中分享虚构叙事配队参考，并讨论4.6版本首日流水排名。",
+      "related_events": [
+        {
+          "title": "4.6版本「月升之前，与兽共舞」上线与真珠角色实装",
+          "relation": "该帖提及4.6版本上线与真珠角色，与已有事件同属4.6版本话题，但为玩家个人讨论，非同一事件。",
+          "refs": [
+            "SRC-011"
+          ]
+        }
+      ],
+      "dual_score": {
+        "snapshot_hash": "99e364566f10363ba136fd9b599a9ef380361903a33391f6188d2a85d9cda1c9",
+        "first": {
+          "reviewer": "deepseek",
+          "model": "deepseek-flash",
+          "recorded_at": "2026-10-10T12:42:39.560Z",
+          "receipt_id": 185,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 4,
+              "reason": "涉及配队参考与4.6首日流水讨论，对玩家配队决策有参考价值，但为个人分享，影响范围有限。"
+            },
+            "novelty": {
+              "value": 4,
+              "reason": "提供了具体配队金数与角色配置，以及4.6首日流水第三方排名，有一定新增具体信息。"
+            },
+            "evidence": {
+              "value": 3,
+              "reason": "单篇TapTap帖子聚合多条内容，配队有效性未验证，流水数据引用第三方平台无原始链接。"
+            },
+            "audience": {
+              "value": 5,
+              "reason": "配队参考与流水讨论涉及玩家配队和版本关注，但为个人观点，不代表玩家总体。"
+            },
+            "investigability": {
+              "value": 4,
+              "reason": "可回查帖子原文，但配队实战有效性与流水原始数据需进一步验证。"
+            }
+          },
+          "total": 40,
+          "decision": "watch",
+          "reason": "有具体配队配置和流水数据可回查，但为单帖个人分享，配队有效性与流水原始来源未验证，建议观察。",
+          "source_refs": [
+            "SRC-011"
+          ]
+        },
+        "second": {
+          "reviewer": "codex",
+          "model": "Codex 当前对话（宿主未暴露精确模型标识）",
+          "recorded_at": "2026-10-10T12:46:04.507Z",
+          "receipt_id": null,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 1,
+              "reason": "当前摘要混合其他推荐帖，不能确认本帖有相应事件。"
+            },
+            "novelty": {
+              "value": 1,
+              "reason": "配队和流水属于不同话题，不能拼成一次发生。"
+            },
+            "evidence": {
+              "value": 1,
+              "reason": "仅搜索摘录且含推荐流，原帖标题冒头，不能支持合成正文。"
+            },
+            "audience": {
+              "value": 2,
+              "reason": "潜在主题有关游戏，但与此材料根正文关系未建立。"
+            },
+            "investigability": {
+              "value": 2,
+              "reason": "应先找到被引用原帖；当前聚合事件不合格。"
+            }
+          },
+          "total": 13,
+          "decision": "drop",
+          "reason": "排除本次拼接事件：模型把推荐列表中的配队与流水内容当成当前帖子，保留错误供修正和回查。",
+          "source_refs": [
+            "SRC-011"
+          ]
+        },
+        "status": "complete",
+        "resolution": {
+          "decision": "watch",
+          "reason": "两次判断不同：DeepSeek为watch，Codex为drop；暂列观察。排除本次拼接事件：模型把推荐列表中的配队与流水内容当成当前帖子，保留错误供修正和回查。"
+        }
+      },
+      "category": "community",
+      "rights_watch": false,
+      "rights_reason": "",
+      "previous_event": null
+    }
+  ],
+  "material_outcomes": [
+    {
+      "material_id": "SRC-001",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "页面为商品详情壳，无游戏相关正文，无法提取事件或玩家反馈。"
+    },
+    {
+      "material_id": "SRC-002",
+      "status": "pending",
+      "event_ids": [],
+      "reason": "为个人换号/换角色交易帖，仅反映个别玩家交易需求，无游戏内容争议或可调查的社区问题。"
+    },
+    {
+      "material_id": "SRC-003",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "搜索聚合页，导航与推荐流不构成当前文章正文，无法作为单一事件来源。"
+    },
+    {
+      "material_id": "SRC-004",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：标题称绝区零联动星铁角色卡芙卡、知更鸟前瞻切片，发布时间2026-10-09，是同一联动传闻的社区视频来源。"
+    },
+    {
+      "material_id": "SRC-005",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "为线下漫展票务页面，与崩坏：星穹铁道游戏内容无直接关系。"
+    },
+    {
+      "material_id": "SRC-006",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "页面为权限壳，无法获取正文，不能作为事件来源。"
+    },
+    {
+      "material_id": "SRC-007",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-002"
+      ],
+      "reason": "EVT-002：帖子正文为玩家个人回坑咨询，询问老角色是否还能打并提及数值膨胀顾虑，是同一具体发帖。"
+    },
+    {
+      "material_id": "SRC-008",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-001"
+      ],
+      "reason": "EVT-001：标题称绝区零联动崩坏星穹铁道角色官方前瞻公布，联动角色为知更鸟和卡芙卡，与SRC-004同属origin_group SRC-004，为同源转载。"
+    },
+    {
+      "material_id": "SRC-009",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "内容为动漫游戏嘉年华票务，未涉及崩坏：星穹铁道具体玩家反馈或游戏事件，与目标游戏无关。"
+    },
+    {
+      "material_id": "SRC-010",
+      "status": "excluded",
+      "event_ids": [],
+      "reason": "正文缺失，仅有标题和加载提示，无法判断具体玩家反馈或事件，不构成可用材料。"
+    },
+    {
+      "material_id": "SRC-011",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-003"
+      ],
+      "reason": "EVT-003：帖子正文聚合了玩家配队分享与4.6首日流水讨论，是同一帖子内的多条玩家内容。"
+    },
+    {
+      "material_id": "SRC-012",
+      "status": "pending",
+      "event_ids": [],
+      "reason": "官方动态正文为长图，文字片段仅含4.2版本标题与版本名称，缺少具体版本内容原文，待补长图文字或官方公告正文。"
+    }
+  ],
+  "search_log": [
+    {
+      "query": "崩坏星穹铁道 4.6 末日幻影 10月5日 规则更新 官方公告",
+      "purpose": "official",
+      "outcome": "返回0条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 site:bilibili.com 版本 关卡 难度 配队 机制 讨论",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 site:taptap.cn 新角色 强度 专武 队伍 抽取取舍 讨论",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 site:bilibili.com 剧情 角色塑造 演出 评价 讨论",
+      "purpose": "community",
+      "outcome": "返回3条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 site:taptap.cn 活动 联动 奖励 体验 讨论",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 site:bilibili.com 运营 规则 权益 补偿 反馈 讨论",
+      "purpose": "community",
+      "outcome": "返回0条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "query": "崩坏：星穹铁道 珍珠 纯欢愉 必抽 珍珠 不抽 队伍 珍珠 配队 抽卡预算 后续 反馈",
+      "purpose": "community",
+      "outcome": "返回5条搜索线索，正文尚未读取。",
+      "failure": null
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏：星穹铁道 site:reddit.com 新角色 强度 专武 队伍 抽取取舍 讨论",
+      "purpose": "community",
+      "outcome": "返回0条具体事件线索。",
+      "failure": null
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏：星穹铁道 site:douyin.com 新角色 强度 专武 队伍 抽取取舍 讨论",
+      "purpose": "community",
+      "outcome": "返回1条具体事件线索。",
+      "failure": null
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 4.6 末日幻影 欢愉 旧队伍 机制 难度 反馈",
+      "purpose": "community",
+      "outcome": "返回2条具体事件线索。",
+      "failure": null
+    },
+    {
+      "phase": "targeted",
+      "query": "崩坏星穹铁道 真珠 纯欢愉 配队 抽取 取舍 反馈",
+      "purpose": "community",
+      "outcome": "返回5条具体事件线索。",
+      "failure": null
+    }
+  ],
+  "limitations": [
+    "公开搜索不是全网覆盖或玩家总体抽样；没有连续观测，不输出热度涨幅或舆情预测。",
+    "模型负责语义判断，程序只校验结构、日期候选、引用及分数，不能程序化证明内容真实。",
+    "视频页面只作线索；来源片段可能不完整，未读取部分不做结论。",
+    "研究优先分为试验口径，未进行独立标注校准；不是风险概率。",
+    "同源语言版与转载不视为独立事实证据。"
+  ],
+  "review": {
+    "verdict": "保留 12 条材料，归组 3 个事件；推荐 0 个。推荐是研究建议，不代表来源主张已获证实。",
+    "material_disposition": "按去重材料计：已归入事件 4 条；待归组 2 条；已排除 6 条。",
+    "useful": [
+      "社区视频称绝区零3.3前瞻公布联动星铁角色知更鸟与卡芙卡：两次判断为观察，或推荐所需来源尚不足。保留联动线索；不得将视频标题所称官宣直接写成官方事实，待核实原前瞻。",
+      "玩家发帖询问老角色回坑是否还能打并提及数值膨胀顾虑：两次判断为观察，或推荐所需来源尚不足。这是日期未确认的回坑咨询，不作为10月近期新事件或整体数值膨胀证据。",
+      "TapTap帖子聚合玩家配队分享与4.6首日流水讨论：两次判断不同：DeepSeek为watch，Codex为drop；暂列观察。排除本次拼接事件：模型把推荐列表中的配队与流水内容当成当前帖子，保留错误供修正和回查。"
+    ],
+    "failures": [
+      "正文片段 2 条；仅摘要 10 条；无法读取 0 条。",
+      "社区视频称绝区零3.3前瞻公布联动星铁角色知更鸟与卡芙卡：官方前瞻直播或公告原文未获取",
+      "社区视频称绝区零3.3前瞻公布联动星铁角色知更鸟与卡芙卡：联动角色实装时间与获取方式未确认",
+      "社区视频称绝区零3.3前瞻公布联动星铁角色知更鸟与卡芙卡：视频标题所述内容是否与官方一致未核实",
+      "玩家发帖询问老角色回坑是否还能打并提及数值膨胀顾虑：帖子未列出具体老角色名单",
+      "玩家发帖询问老角色回坑是否还能打并提及数值膨胀顾虑：未说明所指数值膨胀的具体版本或玩法场景",
+      "玩家发帖询问老角色回坑是否还能打并提及数值膨胀顾虑：发帖时间未显示完整日期",
+      "TapTap帖子聚合玩家配队分享与4.6首日流水讨论：帖子中配队参考的实战有效性未验证",
+      "TapTap帖子聚合玩家配队分享与4.6首日流水讨论：流水数据引用第三方平台，未提供原始链接",
+      "TapTap帖子聚合玩家配队分享与4.6首日流水讨论：帖子发布时间未显示完整日期"
+    ],
+    "next_steps": []
+  }
+}

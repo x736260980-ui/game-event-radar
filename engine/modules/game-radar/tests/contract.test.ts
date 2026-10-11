@@ -1,0 +1,36 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { validateResearch, researchScore } from "../contract.ts";
+import {pendingScore} from '../scoring.ts';
+const base = JSON.parse(readFileSync(new URL("./fixtures/pilot-001/research-input.json",import.meta.url),"utf8"));
+const mapping = JSON.parse(readFileSync(new URL("./fixtures/pilot-001/engine-mapping.json",import.meta.url),"utf8"));
+const copy = () => structuredClone(base);
+test("validates the unchanged historical research",()=> {
+  const {data} = validateResearch(copy(),mapping);
+  assert.equal(data.materials.length,18); assert.equal(data.events.length,6);
+  assert.equal(researchScore(data.events[0]!),72);
+  assert.equal(researchScore(data.events[1]!),65);
+});
+test("rejects missing material references",()=>{const d=copy();d.events[0].members[0].material_id="SRC-999";assert.throws(()=>validateResearch(d,mapping));});
+test("rejects duplicate material IDs",()=>{const d=copy();d.materials[1].id=d.materials[0].id;assert.throws(()=>validateResearch(d,mapping));});
+test("rejects future observations",()=>{const d=copy();d.materials[0].observed_on="2026-10-05";assert.throws(()=>validateResearch(d,mapping));});
+test("rejects a nonexistent calendar date",()=>{const d=copy();d.run.as_of="2026-02-30";assert.throws(()=>validateResearch(d,mapping));});
+test("rejects a javascript URL",()=>{const d=copy();d.materials[0].url="javascript:alert(1)";assert.throws(()=>validateResearch(d,mapping));});
+test("rejects unknown game category",()=>{const m=structuredClone(mapping);m.categories["EVT-001"]="ai-models";assert.throws(()=>validateResearch(copy(),m));});
+test("rejects out-of-range score",()=>{const d=copy();d.events[0].scores.impact.value=11;assert.throws(()=>validateResearch(d,mapping));});
+test("does not allow an excerpt-only citation as a confirmed fact",()=>{const d=copy();d.events[0].confirmed_facts[0].refs=["SRC-004"];assert.throws(()=>validateResearch(d,mapping));});
+test("does not allow a news timestamp from an undated material",()=>{const d=copy();d.materials[0].published_at=null;assert.throws(()=>validateResearch(d,mapping));});
+test("existing-story mapping must be an explicit valid UUID",()=>{const m=structuredClone(mapping);m.existing_stories={"EVT-001":"new guessed story"};assert.throws(()=>validateResearch(copy(),m));});
+test('does not fabricate candidates for an empty result',()=>{const d=copy();d.materials=[];d.events=[];const out=validateResearch(d,{categories:{}});assert.equal(out.data.events.length,0);});
+test('caps recommendations at five rather than silently hiding extras',()=>{const d=copy();for(const e of d.events)e.decision='recommend';assert.throws(()=>validateResearch(d,mapping),/five recommended/);});
+test('preserves on-demand model receipts and rejects negative call counts',()=>{const d=copy();d.run.model_api_calls=4;d.run.model_receipt_ids=[1,2,3,4];d.run.execution_mode='manual_backend_api';assert.equal(validateResearch(d,mapping).data.run.model_api_calls,4);d.run.model_api_calls=-1;assert.throws(()=>validateResearch(d,mapping));});
+test('metadata cannot be upgraded into a video transcript',()=>{const d=copy();d.materials[0].content_kind='video_metadata';d.materials[0].access='body';assert.throws(()=>validateResearch(d,mapping),/Video metadata/);});
+test('later workflows still require a real dual-review record',()=>{const d=copy();d.run.workflow_version='9';assert.throws(()=>validateResearch(d,mapping),/Missing dual review/);});
+test('later workflows still require complete material dispositions',()=>{const d=copy();d.run.workflow_version='9';d.materials=[];d.events=[];assert.throws(()=>validateResearch(d,{categories:{}}),/material_outcomes/);});
+test('later workflows still reject unsupported confirmation prose',()=>{
+ const d=copy();d.run.workflow_version='9';d.events=d.events.slice(0,1);const e=d.events[0];
+ e.confirmed_facts=[];e.occurrence='官方已经确认这一争议';e.decision='watch';
+ e.dual_score=pendingScore(d.materials,e,{reviewer:'deepseek',model:'test',recorded_at:'2026-09-30T00:00:00Z',receipt_id:1,blind:true,scores:e.scores,decision:'watch',reason:'等待核实',source_refs:e.members.map((m:{material_id:string})=>m.material_id)});
+ assert.throws(()=>validateResearch(d,{categories:{[e.id]:mapping.categories[e.id]}}),/Unsupported narrative confirmation/);
+});

@@ -1,0 +1,347 @@
+{
+  "schema_version": "game-event-radar-input-1.0",
+  "run": {
+    "id": "pilot-001",
+    "game": "崩坏：星穹铁道",
+    "as_of": "2026-09-30",
+    "window_days": 14,
+    "expansion_reason": "7 天内虽有上线资讯，但能读取的早期官方系统说明不足，补查 9 月 20 日前瞻与官方帖子；窗口扩至 9 月 17 日，不把旧公告伪装成今天新闻。",
+    "researcher": "当前对话 AI；未经过独立人工或第二模型复核",
+    "method": "公开网页搜索、打开原页核对可读内容；语义归组和评分由当前 AI 填写，Python 仅作确定性校验、计算和导出。没有使用私人数据或现有项目数据库。"
+  },
+  "search_log": [
+    {"query": "崩坏 星穹铁道 2026年9月 更新 公告 9月30日", "purpose": "先建立官方更新背景", "outcome": "命中 4.6 维护、官网与公告；官网部分打开后只有页面壳。"},
+    {"query": "Honkai Star Rail September 2026 September 23 30 update", "purpose": "查看国际资讯与社区线索", "outcome": "命中 Gematsu、Reddit；也混入旧卡池页面，不把抓取日期当发布日期。"},
+    {"query": "星穹铁道 2026 9月 29 30 4.6 争议 玩家", "purpose": "寻找公开体验讨论", "outcome": "找到游戏日报的幻宠报道与 Bangumi 讨论楼；后者要引用的回复只在搜索索引可读。"},
+    {"query": "星穹铁道 2026 9月 货币战争 零和博弈 4.6", "purpose": "核查玩法更新线索", "outcome": "找到 4399 转述的双倍晋升点与重置说明，原页正文未解析出，年份未确认。"},
+    {"query": "星穹铁道 2026 9月 24 25 26 无名勋礼 星际碰碰", "purpose": "补查活动官方入口", "outcome": "找到 TapTap 官方维护帖，也命中 4.5 旧勋礼公告。"},
+    {"query": "星际幻宠 2026 9月29 玩家 收费 盲盒", "purpose": "进一步查幻宠体验与消费议题", "outcome": "结果混入实体盲盒和其他游戏；没有因此推断本游戏有普遍消费争议。"},
+    {"query": "site.taptap.cn/moment 星际幻宠 2026", "purpose": "定位官方幻宠说明", "outcome": "从论坛列表再定位到独立官方帖子，补得可读取文字。"},
+    {"query": "site.hsr.hoyoverse.com 货币战争 4.6 重置", "purpose": "尝试找重置的一手说明", "outcome": "未取得可读取的独立官方重置正文，线索维持观察。"},
+    {"query": "site.bgm.tv 4.6版本讨论楼", "purpose": "复核社区原帖", "outcome": "原域名打开失败；同站另一个可访问地址只显示楼主与日期，没有搜索摘要中的回复。"},
+    {"query": "星际幻宠：你的开拓旅途好伙伴 taptap", "purpose": "定位准确公告链接", "outcome": "读到官方 9 月 20 日文字，确认公布免费礼券及跟宠玩法；图内规则没有读取。"},
+    {"query": "星际幻宠 9月29日 玩家", "purpose": "补充不同来源的讨论", "outcome": "噪声较多，没有形成独立社区抽样。"},
+    {"query": "4.6版本讨论楼 2026", "purpose": "检查讨论时间与索引内容", "outcome": "时间可回查，但引用的具体回复仍只能按搜索片段登记。"}
+  ],
+  "limitations": [
+    "本轮仅是公开搜索可见材料的便利样本，不代表全网事件、玩家总体或中文社区覆盖。",
+    "搜索后半段围绕已发现的幻宠、时装议题追查，存在选题强化偏差；没有历史热度基线。",
+    "正文可读只指实际引用的文字已读取，图片、视频和折叠回复不自动算已读；搜索摘要可能截断或滞后。",
+    "主帖和转载可能共用官方消息源；来源组数不能当作事实得到多方独立验证。",
+    "评分、归组与本轮复盘来自同一 AI，没有独立标签集或人工对照，不能据此声称准确率或节省时间。",
+    "记录观察日期为 2026-09-30。相对发布日期、没有年份的时间和动态列表不强行补成精确发布日期。",
+    "本轮未调用 MediaCrawler、评论数据库或 Persona；没有采集玩家评论样本，也没有创建后续研究任务。"
+  ],
+  "materials": [
+    {
+      "id": "SRC-001", "title": "4.6版本更新说明（官方页）", "url": "https://hsr.hoyoverse.com/zh-cn/news/166468",
+      "source_name": "HoYoverse 官方网站", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-28", "date_basis": "官方搜索索引显示 2026/9/28；直接打开无正文。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "官方页直接打开只返回页面壳，保留搜索索引短片段，不视为读完官方正文。",
+      "excerpt": "双倍晋升点模式开启", "summary": "官方索引列出 4.6 开放新剧情、玩法更新及货币战争晋升点调整。仅用于定位待核查事项。",
+      "decision": "use", "selection_reason": "窗口内官方索引可提供线索，但所有陈述必须保留摘要访问限制。"
+    },
+    {
+      "id": "SRC-002", "title": "4.6版本预下载&更新预告", "url": "https://www.taptap.cn/moment/852146581372145510?group_id=311675",
+      "source_name": "TapTap 崩坏：星穹铁道官方账号", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-24", "date_basis": "页面 09/24；正文明确 2026/09/24 与 2026/09/28。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "已读取维护时间、预下载和补偿的文字，不等于实际服务器状态监测。",
+      "excerpt": "维护期间无法登录游戏", "summary": "公告安排 9 月 28 日维护，提供预下载指引和停服补偿说明。",
+      "decision": "use", "selection_reason": "一手可读的上线背景；单独维护安排不等于用户体验问题。"
+    },
+    {
+      "id": "SRC-003", "title": "9月28日4.6版本更新公告整理", "url": "https://www.wywyx.com/news/202609/593766.html",
+      "source_name": "玩一玩", "source_kind": "media", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-28", "date_basis": "页面明确 2026-09-28 14:54:34。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "可读的二手公告整理；不是独立实测，也不能替代缺失的官方图内规则。",
+      "excerpt": "新增星际幻宠交换功能", "summary": "整理幻宠跟随与交换、时装使用不同货币购买、货币战争双倍晋升点等更新内容。",
+      "decision": "use", "selection_reason": "帮助拆出具体可研究变化；多个子议题共用本材料，不算多份独立证据。"
+    },
+    {
+      "id": "SRC-004", "title": "米哈游《崩坏：星穹铁道》怎么老干“费力不讨好”的事儿？", "url": "https://www.sohu.com/a/1082336078_118576",
+      "source_name": "游戏日报／搜狐", "source_kind": "media", "origin_group": "game-daily-pet-commentary",
+      "published_at": "2026-09-29", "date_basis": "搜索索引显示 2026-09-29 17:50。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "直接打开失败；搜索片段包含作者对社区争议的转述，未核查其原始玩家样本。",
+      "excerpt": "围绕画风设计、商业化模式的争议声", "summary": "作者称幻宠玩法出现收集讨论以及对美术和商业化的争议；这里只能确认存在这样的媒体说法。",
+      "decision": "use", "selection_reason": "可提供选题线索，但不能据此宣称玩家普遍不满或讨论量很大。"
+    },
+    {
+      "id": "SRC-005", "title": "4.6版本讨论楼", "url": "https://bgm.tv/rakuen/topic/subject/41118",
+      "source_name": "Bangumi 公开讨论", "source_kind": "community", "origin_group": "bangumi-topic-41118",
+      "published_at": "2026-09-28", "date_basis": "帖子日期 2026-9-28；引用的回复索引显示 2026-9-29。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "原链接直接读取失败；另查 bangumi.tv/subject/topic/41118 仅见楼主，具体回复只在索引可读。",
+      "excerpt": "过渡章，回收了一些伏笔", "summary": "一位回复者谈到剧情伏笔、角色塑造和幻宠外观；不足以代表社区总体评价。",
+      "decision": "use", "selection_reason": "保留少量具体观点作为弱线索，不用社区网页的存在冒充评论采样。"
+    },
+    {
+      "id": "SRC-006", "title": "Honkai: Star Rail version 4.6 launches September 28", "url": "https://www.gematsu.com/2026/09/honkai-star-rail-version-4-6-update-dance-with-the-beast-before-moonrise-launches-september-28",
+      "source_name": "Gematsu", "source_kind": "media", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-20", "date_basis": "文章页 Sep 20 2026，非搜索抓取日期。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "正文自述更新概览来自 miHoYo，因此与官方前瞻同源，不算独立验证。",
+      "excerpt": "Here is an overview of the update, via miHoYo", "summary": "转述 4.6 剧情、幻宠和时装，并称绝区零联动角色将在 4.8 出现；具体未来获取规则未提供。",
+      "decision": "use", "selection_reason": "扩展窗口中的前瞻背景，可与上线材料连接，但不是新的今日事件。"
+    },
+    {
+      "id": "SRC-007", "title": "4.6版本即將上線（NIJIGEN）", "url": "https://www.nijigengames.com/news/145?newsCategory=%E5%85%A8%E9%83%A8%E6%B6%88%E6%81%AF&newsPage=1",
+      "source_name": "NIJIGEN GAMES", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-21", "date_basis": "搜索索引显示 2026.09.21；原页读取为公司首页内容。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "实际打开没有取得所需新闻正文，不能把站点公司介绍当成该新闻。",
+      "excerpt": "將於2026年9月28日正式上線", "summary": "区域发行方的索引描述了 4.6 上线与生研院剧情前瞻，仅作线索。",
+      "decision": "use", "selection_reason": "记录官方渠道也可能读取失败；不因来源身份取消访问限制。"
+    },
+    {
+      "id": "SRC-008", "title": "货币战争·零和博弈更新说明 V4.6（转述）", "url": "https://a.4399.cn/gl/54179922_359324.html",
+      "source_name": "4399 用户发帖", "source_kind": "community", "origin_group": "hoyoverse-currency-war-repost",
+      "published_at": null, "date_basis": "页面只显示 09-23，没有年份；内容指向本版本，但不据此补精确日期。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "搜索索引有重置列表，打开页面只有标题/图片，未取得正文文字。",
+      "excerpt": "部分奖励将进行重置", "summary": "索引转述晋升点加速与赛季奖励重置；具体保留项、截止时间需要核查官方公告。",
+      "decision": "watch", "selection_reason": "日期和一手规则未完整确认，保留权益时间线索，不作为已确认损失。"
+    },
+    {
+      "id": "SRC-009", "title": "Daily Questions Megathread (September 30, 2026)", "url": "https://www.reddit.com/r/HonkaiStarRail/comments/1wty50f/daily_questions_megathread_september_30_2026/",
+      "source_name": "Reddit r/HonkaiStarRail", "source_kind": "community", "origin_group": "reddit-daily-20260930",
+      "published_at": "2026-09-30", "date_basis": "搜索结果题名与日期一致，但实际讨论内容没有读取。", "observed_on": "2026-09-30",
+      "access": "unavailable", "access_note": "打开失败；结果只有日常问答模板，无法判断具体议题。",
+      "excerpt": "", "summary": "", "decision": "watch", "selection_reason": "记录社区覆盖缺口，不把泛用模板生成成玩家观点。"
+    },
+    {
+      "id": "SRC-010", "title": "星穹铁道9月大事件（旧视频）", "url": "https://www.bilibili.com/video/BV18NtP6YEWj/",
+      "source_name": "Bilibili 视频页索引", "source_kind": "community", "origin_group": "bili-bv18ntp6yewj",
+      "published_at": "2026-08-29", "date_basis": "结果正文明确 2026-08-29 11:00，而非近日抓取时间。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "只有网页索引与标题，没有观看视频或采集评论。",
+      "excerpt": "2026-08-29 11:00:00", "summary": "标题含 9 月与 4.6，但实际发布已超过窗口。",
+      "decision": "exclude", "selection_reason": "超出 14 天窗口，不能当成新出现的讨论。"
+    },
+    {
+      "id": "SRC-011", "title": "4.5版本无名勋礼更新（旧公告）", "url": "https://news.4399.com/bhxqtd/zixun/m/1014940.html",
+      "source_name": "4399", "source_kind": "media", "origin_group": "hoyoverse-4.5-battlepass",
+      "published_at": "2026-08-26", "date_basis": "搜索摘要标明 26-08-26，9 月 28 日是购买截止时间。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "仅使用搜索摘要识别旧版本与时间，不补写活动详情。",
+      "excerpt": "4.5版本", "summary": "旧勋礼购买截止日期导致它进入本次搜索结果。",
+      "decision": "exclude", "selection_reason": "旧事件误命中；不能混同新版本勋礼。"
+    },
+    {
+      "id": "SRC-012", "title": "西普大陆9月29日版本更新前瞻", "url": "https://www.taptap.cn/moment/853010584201856488?group_id=639452",
+      "source_name": "TapTap 西普大陆", "source_kind": "official", "origin_group": "xipu-september-update",
+      "published_at": null, "date_basis": "只见相对修改时间；标题更新日期不是发布日期。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "搜索正文片段足以识别游戏不同，未深入采集。",
+      "excerpt": "《西普大陆》手游", "summary": "包含星际等相近词，但不是本轮目标游戏。",
+      "decision": "exclude", "selection_reason": "明确不相关；保留作为宽检索误命中的真实例子。"
+    },
+    {
+      "id": "SRC-013", "title": "星际幻宠：你的开拓旅途好伙伴！", "url": "https://www.taptap.cn/moment/850762257955553335",
+      "source_name": "TapTap 崩坏：星穹铁道官方账号", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-20", "date_basis": "独立页显示 09/20；官方列表搜索索引明确 2026/9/20，与版本前瞻时间一致。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "已读官方帖文字；多张规则图片未读取，不推断图片中的保底、价格或交换条款。",
+      "excerpt": "共计可免费获取「潮玩礼券」*24", "summary": "官方介绍幻宠陪伴与跟随玩法，并宣布版本期间可免费获取 24 张抽取礼券。",
+      "decision": "use", "selection_reason": "为幻宠事件提供可读的一手事实，但不能据此判定全部获取成本。"
+    },
+    {
+      "id": "SRC-014", "title": "商店上新 | V4.6 月升之前，与兽共舞", "url": "https://www.taptap.cn/moment/850766643989579091",
+      "source_name": "TapTap 崩坏：星穹铁道官方账号", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": "2026-09-20", "date_basis": "页面 09/20，与同日 2026 年 4.6 公告上下文交叉核对；年份由上下文确认。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "可读正文确认两款时装名称；价格、展示差异可能在图片内，未把图片当已读。",
+      "excerpt": "全新时装「月待花时」", "summary": "官方宣布绯英和风堇的新时装；本文可读文字没有价格与数值效果说明。",
+      "decision": "use", "selection_reason": "官方事实与媒体价格转述分开保留，防止误推付费加强。"
+    },
+    {
+      "id": "SRC-015", "title": "利好玩家？崩铁新时装情报", "url": "https://www.taptap.cn/moment/851240409156816258",
+      "source_name": "TapTap 社区资讯帖", "source_kind": "community", "origin_group": "hoyoverse-4.6-release",
+      "published_at": null, "date_basis": "页面只显示昨天，搜索抓取时间不一致；不强行换算发布日期。", "observed_on": "2026-09-30",
+      "access": "body", "access_note": "已读作者正文；页面有投票但不是代表性玩家样本，不使用票数推总体。",
+      "excerpt": "考虑拿下不", "summary": "作者讨论新时装并转述两种货币价格，赞美外观；是作者看法及公告转述，不是独立实测。",
+      "decision": "watch", "selection_reason": "内容可作背景，但发布日期未定；不充当窗口内新增讨论证据。"
+    },
+    {
+      "id": "SRC-016", "title": "Ver.4.6アプデ情報まとめ", "url": "https://gamewith.jp/houkaistarrail/article/show/402987",
+      "source_name": "GameWith", "source_kind": "media", "origin_group": "hoyoverse-4.6-release",
+      "published_at": null, "date_basis": "搜索显示 9 月 30 日最后更新，但长期滚动页面的本条发布日期不明确。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "打开所得长页面与搜索片段不易对应，未取得本轮所需条目的明确正文位置。",
+      "excerpt": "Ver.4.6アプデ情報まとめ", "summary": "版本汇总导航存在，但不作为新的独立事件或日期证据。",
+      "decision": "watch", "selection_reason": "滚动页面与更新时间口径不清；不因页面更新就创造新事件。"
+    },
+    {
+      "id": "SRC-017", "title": "星穹铁道官网新闻列表", "url": "https://sr.mihoyo.com/news",
+      "source_name": "米哈游官网", "source_kind": "official", "origin_group": "hoyoverse-4.6-release",
+      "published_at": null, "date_basis": "列表有多个不同日期，不把整张列表赋成某一天。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "搜索可见公告列表，直接打开没有对应条目正文。",
+      "excerpt": "4.6版本「无名勋礼」更新", "summary": "可定位维护、活动和勋礼公告，但不是一篇可用于全文判断的材料。",
+      "decision": "watch", "selection_reason": "仅作入口，不生成新的争议结论。"
+    },
+    {
+      "id": "SRC-018", "title": "走近星穹——货币战争特别节目（旧视频）", "url": "https://www.youtube.com/watch?v=ej3ZdwFcq-4",
+      "source_name": "星穹铁道官方 YouTube 索引", "source_kind": "official", "origin_group": "hoyoverse-currency-war-2025",
+      "published_at": "2025-11-02", "date_basis": "搜索结果明确 Published: 2025-11-02。", "observed_on": "2026-09-30",
+      "access": "excerpt_only", "access_note": "仅索引说明，未观看视频。",
+      "excerpt": "2025-11-02", "summary": "同名玩法旧节目，不能支持 4.6 重置规则。",
+      "decision": "exclude", "selection_reason": "超出窗口且不是本期更新，避免同名玩法误归组。"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-001", "title": "幻宠收集：免费体验、交换便利与消费感受是否一致？",
+      "occurrence": "4.6 新增幻宠收集与陪伴系统，从 9 月 20 日公布延伸到 9 月 28 日上线及媒体后续讨论；不含其他游戏或实体盲盒。",
+      "decision": "recommend", "decision_reason": "有一手玩法说明，又出现值得核查的商业化评价线索；可研究具体获取体验，而不是先认定玩家反感。",
+      "rights_watch": false, "rights_reason": "",
+      "members": [
+        {"material_id": "SRC-013", "relation": "same_occurrence", "reason": "官方公布此幻宠系统。"},
+        {"material_id": "SRC-006", "relation": "same_occurrence", "reason": "同一前瞻的媒体转述；不新增独立事实证据。"},
+        {"material_id": "SRC-003", "relation": "development", "reason": "上线时的具体功能整理。"},
+        {"material_id": "SRC-004", "relation": "development", "reason": "上线后针对幻宠的媒体评论，仅搜索片段可读。"},
+        {"material_id": "SRC-005", "relation": "context", "reason": "版本讨论中少量外观评价，不能推整体态度。"}
+      ],
+      "confirmed_facts": [{"text": "官方宣布幻宠陪伴玩法，并说明 4.6 期间可免费获得 24 张潮玩礼券。", "refs": ["SRC-013"]}],
+      "source_claims": [
+        {"text": "媒体整理称系统包含跟随与交换功能；完整交换规则仍需原公告核查。", "refs": ["SRC-003"]},
+        {"text": "游戏日报的搜索片段称外观和商业化存在争议；它没有在本轮提供可检查的玩家样本。", "refs": ["SRC-004"]},
+        {"text": "一个社区回复片段表达对不同幻宠外观的不同喜好，不能据此判断整体评价。", "refs": ["SRC-005"]}
+      ],
+      "unknowns": ["未读取规则图片，不能确认全部抽取成本、保底与交换限制。", "没有对正负评价做采样，媒体所称争议规模未核实。"],
+      "research_question": "玩家关注的主要是外观、免费收集进度、重复款处理还是付费边界？不同诉求能否区分，而不是合并成泛商业化不满？",
+      "platforms": ["Bilibili", "TapTap", "抖音"], "keywords": ["星际幻宠 免费24抽", "星际幻宠 交换 重复", "星际幻宠 盲盒 体验"],
+      "scores": {
+        "impact": {"value": 7, "reason": "涉及持续收集与消费体验，但未证明经济损害。"},
+        "novelty": {"value": 8, "reason": "本版本新系统，有明确新增内容。"},
+        "evidence": {"value": 6, "reason": "官方文字可读，争议材料仍主要是摘要和少量观点。"},
+        "audience": {"value": 7, "reason": "面向外观、收集和社交玩家，不能当作全体共同关切。"},
+        "investigability": {"value": 9, "reason": "系统名独特，具体体验维度容易形成采样范围。"}
+      }
+    },
+    {
+      "id": "EVT-002", "title": "新时装使用不同资源购买：玩家如何权衡外观与抽卡？",
+      "occurrence": "4.6 绯英、风堇时装上架；只研究这次外观消费选择，不推断付费带来战力增强。",
+      "decision": "recommend", "decision_reason": "官方已宣布两款时装；二手材料的不同货币价格提供了具体可核查的资源取舍问题。",
+      "rights_watch": false, "rights_reason": "",
+      "members": [
+        {"material_id": "SRC-014", "relation": "same_occurrence", "reason": "官方商店上新预告为根材料。"},
+        {"material_id": "SRC-003", "relation": "development", "reason": "上线整理给出价格与货币口径，仍是二手材料。"},
+        {"material_id": "SRC-015", "relation": "context", "reason": "同一商店信息的社区解读，日期未知，不算近期讨论增量。"}
+      ],
+      "confirmed_facts": [{"text": "官方宣布绯英的月待花时和风堇的云边拾暖时装。", "refs": ["SRC-014"]}],
+      "source_claims": [
+        {"text": "上线整理和社区资讯帖分别列出星琼与古老梦华价格；本轮未从官方图文完整复核这些价格。", "refs": ["SRC-003", "SRC-015"]},
+        {"text": "社区作者赞赏美术并发起购买意愿投票；这不是对全体玩家的代表性调查。", "refs": ["SRC-015"]}
+      ],
+      "unknowns": ["价格、优惠期限及全部展示差异需要从游戏内或官方完整图文复核。", "未发现足够证据证明时装增加战力，不能套用付费加强叙事。", "尚未采集实际玩家的购买与放弃理由。"],
+      "research_question": "当外观与抽卡可能竞争同一资源时，玩家怎样解释购买、观望或放弃？能否区分喜欢角色、外观价值与预算压力？",
+      "platforms": ["Bilibili", "TapTap"], "keywords": ["月待花时 星琼 时装", "云边拾暖 时装 值不值", "绯英 时装 抽卡 预算"],
+      "scores": {
+        "impact": {"value": 6, "reason": "可能影响资源分配，未证实必需付费或战斗影响。"},
+        "novelty": {"value": 7, "reason": "新时装与不同货币的选择具有具体增量。"},
+        "evidence": {"value": 6, "reason": "上新事实清楚，价格尚依赖同源二手描述。"},
+        "audience": {"value": 6, "reason": "对角色喜爱与外观消费群体更相关。"},
+        "investigability": {"value": 9, "reason": "明确时装名和资源选择，适合定向评论研究。"}
+      }
+    },
+    {
+      "id": "EVT-003", "title": "4.6剧情衔接与角色塑造评价",
+      "occurrence": "本版本生研院剧情；不把其他版本剧情争议迁移过来。",
+      "decision": "watch", "decision_reason": "目前只有前瞻与单个可见回复片段，尚未找到足够具体、重复出现的研究问题；不为了填满 5 个而推荐。",
+      "rights_watch": false, "rights_reason": "",
+      "members": [
+        {"material_id": "SRC-006", "relation": "same_occurrence", "reason": "此版本剧情前瞻的转述。"},
+        {"material_id": "SRC-007", "relation": "same_occurrence", "reason": "同一剧情前瞻的区域发行信息索引。"},
+        {"material_id": "SRC-005", "relation": "development", "reason": "上线后的个人剧情感受片段。"}
+      ],
+      "confirmed_facts": [],
+      "source_claims": [{"text": "少量可见片段谈及过渡感和伏笔回收；没有证据显示这些观点普遍或形成明确对立。", "refs": ["SRC-005"]}],
+      "unknowns": ["完整讨论与更多不同观点未读取；无法分辨长期议题与单人感想。"],
+      "research_question": "若后续获得更多具体反馈，再检查剧情衔接和人物塑造是否形成可分析的分歧。",
+      "platforms": ["Bilibili", "Bangumi"], "keywords": ["4.6 剧情 伏笔", "生研院 剧情 评价"],
+      "scores": {
+        "impact": {"value": 4, "reason": "内容体验可能相关，但本轮问题尚不明确。"},
+        "novelty": {"value": 5, "reason": "新剧情上线，并非已核实的新争议。"},
+        "evidence": {"value": 3, "reason": "具体感受主要来自一个索引回复。"},
+        "audience": {"value": 6, "reason": "剧情玩家可能关注。"},
+        "investigability": {"value": 6, "reason": "可搜索，但缺少清晰的争议边界。"}
+      }
+    },
+    {
+      "id": "EVT-004", "title": "货币战争赛季收尾：奖励期限是否清楚？",
+      "occurrence": "4.6 零和博弈晋升点调整与被转述的赛季重置事项，不含 2025 年玩法介绍。",
+      "decision": "watch", "decision_reason": "双倍晋升点有多处公告转述，但具体重置规则主要来自缺年份且未读取正文的材料，先核查规则再做玩家研究。",
+      "rights_watch": true, "rights_reason": "材料提到奖励期限与重置，可能涉及玩家时间投入；仅提示优先核查，尚无证据证明奖励损失或权益受损已经发生。",
+      "members": [
+        {"material_id": "SRC-001", "relation": "same_occurrence", "reason": "官方版本索引列出晋升点更新。"},
+        {"material_id": "SRC-003", "relation": "same_occurrence", "reason": "同一晋升点更新的二手整理。"},
+        {"material_id": "SRC-008", "relation": "context", "reason": "可能属于同次赛季收尾，但重置细节和日期需复核，不强行视为确认后续。"}
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {"text": "官方索引及媒体整理提到双倍晋升点。", "refs": ["SRC-001", "SRC-003"]},
+        {"text": "4399 搜索片段转述赛季结束后部分奖励重置；未确认一手条款与完整时间口径。", "refs": ["SRC-008"]}
+      ],
+      "unknowns": ["哪些奖励会重置、哪些保留、截止时间是否跨服不同，需核查原公告。", "没有读取玩家关于赶进度或奖励过期的真实样本。"],
+      "research_question": "规则核实后，检查玩家是否理解奖励期限，以及晋升点加速是否缓解收尾压力。",
+      "platforms": ["TapTap", "Bilibili"], "keywords": ["货币战争 零和博弈 重置 奖励", "货币战争 双倍晋升点 4.6"],
+      "scores": {
+        "impact": {"value": 7, "reason": "若涉及奖励期限，可能影响时间投入，但损失未证实。"},
+        "novelty": {"value": 6, "reason": "与赛季收尾相关的规则变化线索。"},
+        "evidence": {"value": 3, "reason": "关键重置规则仅索引可见、日期不完整。"},
+        "audience": {"value": 6, "reason": "影响参与这一玩法的玩家，不扩展成所有用户。"},
+        "investigability": {"value": 7, "reason": "问题具体，但应先取得规则原文。"}
+      }
+    },
+    {
+      "id": "EVT-005", "title": "4.6预下载与维护安排",
+      "occurrence": "9月24日预下载、9月28日维护安排本身。",
+      "decision": "drop", "decision_reason": "例行公告真实但暂未发现具体异常或体验线索，不应把所有更新都变成评论研究项目。",
+      "rights_watch": false, "rights_reason": "",
+      "members": [{"material_id": "SRC-002", "relation": "same_occurrence", "reason": "维护安排官方原帖。"}],
+      "confirmed_facts": [{"text": "官方预告 9 月 28 日维护并给出预下载及补偿说明。", "refs": ["SRC-002"]}],
+      "source_claims": [], "unknowns": ["未检查实际运行情况，不能据此保证没有更新故障。"],
+      "research_question": "只有出现可验证的更新故障或补偿问题，再建立具体研究议题。",
+      "platforms": ["官方公告"], "keywords": ["4.6 更新 故障 补偿"],
+      "scores": {
+        "impact": {"value": 3, "reason": "例行安排，未发现额外影响。"},
+        "novelty": {"value": 2, "reason": "多数内容属常规维护信息。"},
+        "evidence": {"value": 9, "reason": "官方文字和时间明确。"},
+        "audience": {"value": 7, "reason": "涉及更新用户，但广泛相关不等于值得研究。"},
+        "investigability": {"value": 3, "reason": "当前缺少具体问题。"}
+      }
+    },
+    {
+      "id": "EVT-006", "title": "4.8绝区零联动预告：暂存未来议题",
+      "occurrence": "媒体前瞻转述的 4.8 联动角色信息，不是 4.6 已上线玩法。",
+      "decision": "watch", "decision_reason": "未来角色与联动存在报道，但材料没有明确获取规则或可评价体验；不从预告推导收费争议。",
+      "rights_watch": false, "rights_reason": "",
+      "members": [{"material_id": "SRC-006", "relation": "same_occurrence", "reason": "综合稿中单独的未来联动消息，与同稿幻宠/时装不合成一个事件。"}],
+      "confirmed_facts": [],
+      "source_claims": [{"text": "Gematsu 转述称艾莲和耀嘉音将于 4.8 加入联动；本轮未核查独立官方原始预告。", "refs": ["SRC-006"]}],
+      "unknowns": ["获取方式、费用、活动玩法尚未在已读材料里明确。"],
+      "research_question": "待官方明确获取规则后，再研究玩家对联动角色和资源规划的具体反应。",
+      "platforms": ["官方公告", "Bilibili"], "keywords": ["星铁 绝区零 4.8 联动 获取规则"],
+      "scores": {
+        "impact": {"value": 6, "reason": "可能影响未来角色规划，但影响尚未发生。"},
+        "novelty": {"value": 5, "reason": "报道给出角色名，缺具体规则。"},
+        "evidence": {"value": 4, "reason": "可读二手前瞻，不足以确认获取细节。"},
+        "audience": {"value": 7, "reason": "跨游戏玩家可能感兴趣，不推断人数。"},
+        "investigability": {"value": 5, "reason": "当前可做期待调查，规则体验研究需等信息。"}
+      }
+    }
+  ],
+  "review": {
+    "verdict": "完成小样选题链路验证，推荐 2 个具体问题，另外 3 个观察、1 个暂不研究。尚未证明比人工选题更准、更快，也未证明连续监测有效。",
+    "useful": [
+      "把综合版本消息拆为幻宠、时装、剧情、赛季收尾和未来联动等不同议题，没有把共享同一篇公告误写成同一个事件。",
+      "幻宠有可读取的官方介绍，能结合媒体争议线索提出获取体验问题，同时明确未掌握完整成本规则。",
+      "时装从泛上新信息变为外观和抽卡资源如何取舍的具体研究问题，没有错误推导付费增强战力。",
+      "旧 B站视频、旧勋礼公告、其他游戏误命中和 2025 年视频被排除，没有将抓取时间当事件新鲜度。",
+      "赛季奖励期限即使没有热度数据仍单列观察，没有以讨论少为由忽略可能的重要问题。"
+    ],
+    "failures": [
+      "部分官方页打开只有壳，Bangumi 可访问地址没有所需回复，4399 原帖正文未解析出来；不能把搜索片段包装成完整证据。",
+      "没有拿到足够的独立社区原文，本轮仍较像公告驱动的选题助手，早期社区信号发现能力尚未验证。",
+      "搜索结果出现错游戏、旧视频、滚动页和相对日期；需要逐条记录时间依据，搜索引擎近期抓取不等于近期发布。",
+      "多个来源重复官方前瞻；同源转述虽能补可读性，不能提高事实可信度为多方证实。",
+      "剧情和联动方向没有清楚到足以启动深入研究，降为观察而不是凑满 5 条。",
+      "没有独立标注、人工用时对照或第二轮复现，不能从本轮分数推出准确率、提效比例或稳定性。"
+    ],
+    "next_steps": [
+      "先由用户看两个候选是否值得研究，当前没有自动启动评论采集。",
+      "若选幻宠或时装，先补读取官方图文规则，再按选定问题采样评论；不能拿媒体的总体判断替代评论结论。",
+      "观察项优先补赛季重置的一手规则和日期，不先做预测或扩大平台数量。",
+      "下一轮沿用同一规则再做一次少量不同日期材料，记录新增有效事件和重复推荐；有持续收益后才考虑定时服务或网页。"
+    ]
+  }
+}

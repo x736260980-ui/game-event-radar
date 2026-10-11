@@ -1,0 +1,11 @@
+{
+  "categories": {
+    "EVT-001": "version",
+    "EVT-002": "resource",
+    "EVT-003": "story",
+    "EVT-004": "resource",
+    "EVT-005": "operations",
+    "EVT-006": "operations"
+  },
+  "existing_stories": {}
+}

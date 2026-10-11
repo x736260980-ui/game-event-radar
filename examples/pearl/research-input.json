@@ -1,0 +1,319 @@
+{
+  "schema_version": "game-event-radar-input-1.0",
+  "run": {
+    "id": "demo-pearl-v010",
+    "game": "崩坏：星穹铁道",
+    "as_of": "2026-10-10",
+    "researcher": "当前Codex对话",
+    "method": "历史真实研究结果的精选展示；仅重新封装，未重新搜索或评分。",
+    "window_days": 14,
+    "model_api_calls": 1,
+    "model_receipt_ids": [
+      186
+    ],
+    "execution_mode": "conversation_research",
+    "derived_on": "2026-10-10",
+    "retrospective": true,
+    "coverage": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "workflow_version": "6",
+    "discovery_version": "8",
+    "original_run_id": "starrail-september-20261010-v8"
+  },
+  "materials": [
+    {
+      "id": "SRC-002",
+      "title": "4.6版本将于9月28日上线的报道",
+      "url": "https://www.gematsu.com/2026/09/honkai-star-rail-version-4-6-update-dance-with-the-beast-before-moonrise-launches-september-28",
+      "source_name": "www.gematsu.com",
+      "source_kind": "media",
+      "origin_group": "hoyo-46-preview",
+      "published_at": "2026-09-20",
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "当前对话web搜索及open读取；只保留核查摘要。",
+      "excerpt": "报道标明转述miHoYo，介绍真珠的保护、学习队友与纯欢愉队额外回合机制，并介绍新活动。本文发布日期为9月20日，版本上线日期为9月28日，二者分开。",
+      "summary": "报道标明转述miHoYo，介绍真珠的保护、学习队友与纯欢愉队额外回合机制，并介绍新活动。本文发布日期为9月20日，版本上线日期为9月28日，二者分开。",
+      "decision": "use",
+      "selection_reason": "具体问题线索，可回查。",
+      "discovered_at": "2026-10-10T12:40:53.186Z",
+      "date_basis": "标题下Sep 20 2026 / 10:15 AM EDT；不拿上线日期作发布日期。",
+      "event_time": "2026-09-28",
+      "discovery_phase": "generic"
+    },
+    {
+      "id": "SRC-003",
+      "title": "4.6版本更新说明原帖",
+      "url": "https://www.taptap.cn/moment/853326330178046059?group_id=311675",
+      "source_name": "www.taptap.cn",
+      "source_kind": "official",
+      "origin_group": "hoyo-46-update",
+      "published_at": "2026-09-27",
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "当前对话web搜索及open读取；只保留核查摘要。",
+      "excerpt": "官方账号更新说明包含真珠、版本活动与后续高难轮次安排。该公告描述4.6更新，不能据此判断九月仙客天狼的实际难度。",
+      "summary": "官方账号更新说明包含真珠、版本活动与后续高难轮次安排。该公告描述4.6更新，不能据此判断九月仙客天狼的实际难度。",
+      "decision": "use",
+      "selection_reason": "具体问题线索，可回查。",
+      "discovered_at": "2026-10-10T12:40:53.186Z",
+      "date_basis": "已读取官方论坛目录对应作者与9/27日期，并点击进入原帖读取；更新开始是9/28。",
+      "event_time": "2026-09-28",
+      "discovery_phase": "generic"
+    },
+    {
+      "id": "SRC-004",
+      "title": "真珠抽取与养成攻略：冻梨游研社",
+      "url": "https://www.taptap.cn/moment/853647340102223589",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "dongli-pearl-guide",
+      "published_at": "2026-09-28",
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "当前对话web搜索及open读取；只保留核查摘要。",
+      "excerpt": "作者强调纯四欢愉队的额外回合收益，讨论银狼、绯英等组合，也认为砂金戏浪与非欢愉队友仍有更好的组合，不必强行塞入欢愉。文中的提升百分比是作者估算，未复现实测。",
+      "summary": "作者强调纯四欢愉队的额外回合收益，讨论银狼、绯英等组合，也认为砂金戏浪与非欢愉队友仍有更好的组合，不必强行塞入欢愉。文中的提升百分比是作者估算，未复现实测。",
+      "decision": "use",
+      "selection_reason": "具体问题线索，可回查。",
+      "discovered_at": "2026-10-10T12:40:53.186Z",
+      "date_basis": "原帖09/28及4.6上线语境，年份对照已核实版本日期；年份不是页面独立明示。",
+      "discovery_phase": "known_case_followup"
+    },
+    {
+      "id": "SRC-005",
+      "title": "真珠角色解析：HoYo青枫（修订稿）",
+      "url": "https://www.taptap.cn/moment/853556832101207413",
+      "source_name": "www.taptap.cn",
+      "source_kind": "community",
+      "origin_group": "qingfeng-pearl-guide",
+      "published_at": null,
+      "observed_on": "2026-10-10",
+      "access": "body",
+      "access_note": "当前对话web搜索及open读取；只保留核查摘要。",
+      "excerpt": "作者从机制、专武循环和四欢愉配队解释收益；页面仅显示修改于09/28，首次发布日期不明确，作为修订正文背景。",
+      "summary": "作者从机制、专武循环和四欢愉配队解释收益；页面仅显示修改于09/28，首次发布日期不明确，作为修订正文背景。",
+      "decision": "watch",
+      "selection_reason": "具体问题线索，可回查。",
+      "discovered_at": "2026-10-10T12:40:53.186Z",
+      "revised_at": "2026-09-28",
+      "date_basis": "只见修改于09/28，不把修订日期填入首次发布日期。",
+      "discovery_phase": "known_case_followup"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-003",
+      "title": "真珠的四欢愉收益：体系补强与抽取边界",
+      "occurrence": "真珠在4.6版本成为可用角色。九月攻略围绕纯四欢愉队的额外回合、循环和生存支持展开，另有作者提醒部分角色仍适合非欢愉组合。",
+      "decision": "recommend",
+      "decision_reason": "两次均建议研究，来源资格通过。推荐四欢愉收益与投入边界议题；攻略估算不是玩家共识，也不是经过复现实测的结论。",
+      "research_question": "真珠如何改变欢愉体系补强与抽取取舍？",
+      "unknowns": [
+        "未复现攻略中的提升百分比或实战配置。",
+        "缺少普通玩家的正反体验样本。",
+        "部分攻略只有修订时间，首发日期未知。"
+      ],
+      "platforms": [
+        "bilibili",
+        "douyin",
+        "taptap"
+      ],
+      "keywords": [
+        "真珠 强度 四欢愉",
+        "真珠 专武 配队 抽取"
+      ],
+      "members": [
+        {
+          "material_id": "SRC-004",
+          "relation": "same_occurrence",
+          "reason": "九月上线后对真珠机制与抽取边界的具体攻略。"
+        },
+        {
+          "material_id": "SRC-005",
+          "relation": "context",
+          "reason": "同角色已读修订稿，首发日期未知，仅作机制讨论背景。"
+        },
+        {
+          "material_id": "SRC-002",
+          "relation": "context",
+          "reason": "9月20日版本前瞻报道，只作为真珠机制预告背景，不并成同一发布。"
+        },
+        {
+          "material_id": "SRC-003",
+          "relation": "context",
+          "reason": "4.6版本公告用于版本背景，十月高难轮次与九月议题分开。"
+        }
+      ],
+      "confirmed_facts": [],
+      "source_claims": [
+        {
+          "text": "冻梨游研社讨论四欢愉额外回合及部分非欢愉组合的边界。",
+          "refs": [
+            "SRC-004"
+          ]
+        },
+        {
+          "text": "青枫修订稿讨论专武循环及配队，但首次发布日期未核实。",
+          "refs": [
+            "SRC-005"
+          ]
+        }
+      ],
+      "scores": {
+        "impact": {
+          "value": 6,
+          "reason": "涉及新角色真珠对欢愉体系的补强与抽取取舍，可能影响玩家抽卡决策，但限于体系玩家。"
+        },
+        "novelty": {
+          "value": 5,
+          "reason": "新角色机制分析有一定新意，但攻略内容基于版本前瞻，部分为估算。"
+        },
+        "evidence": {
+          "value": 5,
+          "reason": "有官方版本公告、媒体前瞻和社区攻略，但攻略提升百分比未复现，部分首发日期未知。"
+        },
+        "audience": {
+          "value": 6,
+          "reason": "欢愉体系玩家和关注新角色抽取的玩家可能相关，但缺乏普通玩家正反样本。"
+        },
+        "investigability": {
+          "value": 7,
+          "reason": "有官方公告和多个社区攻略可回查，可调查真珠对体系的影响，但需实测验证。"
+        }
+      },
+      "qualification_version": "investigation-v1",
+      "kind": "event",
+      "player_discussion": "讨论现有银狼、绯英等队伍能获得多少补强，缺欢愉成员时是否值得投入，以及是否需要专武改善循环；攻略估算不能直接当玩家共识。",
+      "dual_score": {
+        "snapshot_hash": "d8d0cf4d013f71333304dda1fe2d7498b4155a998b633313bbc897e7ae35f37b",
+        "first": {
+          "reviewer": "deepseek",
+          "model": "deepseek-flash",
+          "recorded_at": "2026-10-10T12:46:09.670Z",
+          "receipt_id": 186,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 6,
+              "reason": "涉及新角色真珠对欢愉体系的补强与抽取取舍，可能影响玩家抽卡决策，但限于体系玩家。"
+            },
+            "novelty": {
+              "value": 5,
+              "reason": "新角色机制分析有一定新意，但攻略内容基于版本前瞻，部分为估算。"
+            },
+            "evidence": {
+              "value": 5,
+              "reason": "有官方版本公告、媒体前瞻和社区攻略，但攻略提升百分比未复现，部分首发日期未知。"
+            },
+            "audience": {
+              "value": 6,
+              "reason": "欢愉体系玩家和关注新角色抽取的玩家可能相关，但缺乏普通玩家正反样本。"
+            },
+            "investigability": {
+              "value": 7,
+              "reason": "有官方公告和多个社区攻略可回查，可调查真珠对体系的影响，但需实测验证。"
+            }
+          },
+          "total": 57,
+          "decision": "recommend",
+          "reason": "有具体对象、官方公告和社区攻略可回查，调查价值较高，但事实可信度需进一步核验。",
+          "source_refs": [
+            "SRC-002",
+            "SRC-003",
+            "SRC-004",
+            "SRC-005"
+          ]
+        },
+        "second": {
+          "reviewer": "codex",
+          "model": "Codex 当前对话（宿主未暴露精确模型标识）",
+          "recorded_at": "2026-10-10T12:46:04.505Z",
+          "receipt_id": null,
+          "blind": true,
+          "scores": {
+            "impact": {
+              "value": 7,
+              "reason": "涉及新角色对完整体系的补强及抽取边界。"
+            },
+            "novelty": {
+              "value": 6,
+              "reason": "九月上线后攻略给出具体配队边界，与前瞻背景区分。"
+            },
+            "evidence": {
+              "value": 6,
+              "reason": "主要攻略正文和官方版本背景可读，收益百分比未复现，缺普通玩家反例。"
+            },
+            "audience": {
+              "value": 7,
+              "reason": "涉及现有阵容、缺员和专武循环的不同投入条件。"
+            },
+            "investigability": {
+              "value": 8,
+              "reason": "角色、队伍条件、原帖与关键词明确。"
+            }
+          },
+          "total": 67,
+          "decision": "recommend",
+          "reason": "推荐四欢愉收益与投入边界议题；攻略估算不是玩家共识，也不是经过复现实测的结论。",
+          "source_refs": [
+            "SRC-004",
+            "SRC-005",
+            "SRC-003"
+          ]
+        },
+        "status": "complete",
+        "resolution": {
+          "decision": "recommend",
+          "reason": "两次均建议研究，来源资格通过。推荐四欢愉收益与投入边界议题；攻略估算不是玩家共识，也不是经过复现实测的结论。"
+        }
+      }
+    }
+  ],
+  "material_outcomes": [
+    {
+      "material_id": "SRC-002",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-003"
+      ],
+      "reason": "已有具体事件承接；归组不等于最终推荐。"
+    },
+    {
+      "material_id": "SRC-003",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-003"
+      ],
+      "reason": "已有具体事件承接；归组不等于最终推荐。"
+    },
+    {
+      "material_id": "SRC-004",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-003"
+      ],
+      "reason": "已有具体事件承接；归组不等于最终推荐。"
+    },
+    {
+      "material_id": "SRC-005",
+      "status": "grouped",
+      "event_ids": [
+        "EVT-003"
+      ],
+      "reason": "已有具体事件承接；归组不等于最终推荐。"
+    }
+  ],
+  "search_log": [],
+  "limitations": [
+    "一次回溯搜索不覆盖九月每一天全部事件；未找到不等于当日无事。",
+    "来源文字为观点或资料线索；没有连续观测，不判断热度、负面趋势或玩家总体。",
+    "读取正文片段与视频元信息分开，不把视频简介当视频内容。"
+  ],
+  "review": {
+    "verdict": "历史精选案例：保留原始证据及两份真实评分，省略整轮私人运行日志。",
+    "next_steps": []
+  }
+}

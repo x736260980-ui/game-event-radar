@@ -1,0 +1,1 @@
+{"name":"@aihot/game-radar","private":true,"type":"module","exports":{"./module":"./module.ts","./server":"./server.ts","./web":"./web.tsx","./contract":"./contract.ts","./update-policy":"./update-policy.ts"},"dependencies":{"@aihot/backend":"*","@aihot/contracts":"*"}}

@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {validateResearch} from '../contract.ts';
+import {evidenceHash,weightedScore} from '../scoring.ts';
+const file=(n:string)=>JSON.parse(readFileSync(new URL('./fixtures/starrail-retrospective-20261010-v6/'+n,import.meta.url),'utf8'));
+const input=file('research-input.json'),mapping=file('engine-mapping.json');
+test('actual completed retrospective keeps publication dates and resolves real dual-review disagreements',()=>{const {data}=validateResearch(input,mapping);assert.equal(data.materials.length,9);assert.equal(data.events.filter(e=>e.decision==='recommend').length,1);assert.equal(data.events[1].dual_score!.first.decision,'watch');assert.equal(data.events[1].dual_score!.second!.decision,'recommend');assert.equal(data.events[1].decision,'watch');assert.equal(data.materials[1].published_at,'2026-09-27');assert.equal(data.materials[1].observed_on,'2026-10-10');});
+test('old dates cannot enter a normal daily run and changing evidence cannot reuse either score',()=>{const d=structuredClone(input);d.run.retrospective=false;assert.throws(()=>validateResearch(d,mapping),/Unusable selected/);const changed=structuredClone(input);changed.materials[0].published_at='2026-09-27';assert.throws(()=>validateResearch(changed,mapping),/Stale/);});
+test('Codex review was stored before DeepSeek and both totals are independently reproducible',()=>{const blind=file('codex-blind-review.json');for(const e of input.events){const b=blind.events.find((x:any)=>x.id===e.id);assert.equal(b.snapshot_hash,evidenceHash(input.materials,e));assert.ok(Date.parse(b.review.recorded_at)<Date.parse(e.dual_score.first.recorded_at));assert.equal(e.dual_score.first.reviewer,'deepseek');assert.equal(e.dual_score.second.reviewer,'codex');assert.ok(e.dual_score.first.receipt_id>0);assert.equal(e.dual_score.second.receipt_id,null);assert.ok(weightedScore(e.dual_score.first.scores)>=0);}});

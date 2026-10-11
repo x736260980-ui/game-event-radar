@@ -1,0 +1,28 @@
+import '../../../tests/setup.ts';
+import test,{after} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {sql,closeDb} from '@aihot/backend/db';
+import {mergeResearchStories} from '@aihot/backend/events/research-merge';
+import {importResearch} from '../import.ts';
+import {storyTexts} from '@aihot/backend/publication/story-text';
+const base=JSON.parse(readFileSync(new URL('./fixtures/pilot-001/research-input.json',import.meta.url),'utf8'));
+after(closeDb);
+test('reviewed research merge preserves aliases, evidence snapshots and audit without model jobs',async()=>{
+  const a=structuredClone(base);a.run.id='merge-a';a.events=a.events.slice(0,1);a.materials=a.materials.filter((m:any)=>a.events[0].members.some((x:any)=>x.material_id===m.id));
+  for(const m of a.materials)m.url+='?independent=merge-a';
+  const b=structuredClone(a);b.run.id='merge-b';for(const m of b.materials)m.url=m.url.replace('merge-a','merge-b');
+  const mapping={categories:{'EVT-001':'version'}};
+  const x:any=(await importResearch(a,mapping)).result;const y:any=(await importResearch(b,mapping)).result;
+  const [before]=await sql`SELECT count(*)::int AS n FROM receipts`;
+  const urls=[a.materials.find((m:any)=>m.id===a.events[0].members[0].material_id).url,b.materials.find((m:any)=>m.id===b.events[0].members[0].material_id).url];
+  const reason='核查相同版本的同一次幻宠收集上线，主体、功能和日期一致；这里只合并事件身份，不新增事实。';
+  await assert.rejects(mergeResearchStories(y.stories[0].public_id,x.stories[0].public_id,reason,['https://wrong.example/a','https://wrong.example/b']),/URLs/);
+  const out=await mergeResearchStories(y.stories[0].public_id,x.stories[0].public_id,reason,urls);assert.equal(out.reused,false);
+  assert.equal((await mergeResearchStories(y.stories[0].public_id,x.stories[0].public_id,reason,urls)).reused,true);
+  const [alias]=await sql`SELECT story_id FROM story_aliases WHERE public_id=${y.stories[0].public_id}`;assert.equal(Number(alias!.story_id),Number(x.stories[0].story_id));
+  const [audit]=await sql`SELECT count(*)::int AS n FROM audit_log WHERE action='radar.merge'`;assert.equal(audit!.n,1);
+  const [after]=await sql`SELECT count(*)::int AS n FROM receipts`;assert.equal(before!.n,after!.n);
+  const digest=(await storyTexts([Number(x.stories[0].story_id)])).get(Number(x.stories[0].story_id))!.digest!;
+  assert.match(digest,/merge-a/);assert.match(digest,/merge-b/);
+});

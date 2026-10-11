@@ -1,0 +1,137 @@
+name: game-event-radar-release
+
+x-app: &app
+  build:
+    context: .
+    args:
+      NODE_BASE_IMAGE: mirror.gcr.io/library/node:24-trixie-slim
+  image: game-event-radar-release-app:local
+  restart: unless-stopped
+
+x-backend: &backend
+  <<: *app
+  env_file: .env
+  environment: &backend-env
+    NODE_ENV: production
+    DATABASE_URL: postgres://radar:${POSTGRES_PASSWORD:?Initialize .env first}@db:5432/radar
+    AIHOT_DATA_DIR: /data
+    API_BASE_URL: http://api:3001
+    COLLECT_ENABLED: "false"
+    MODEL_CALLS_ENABLED: "false"
+    RADAR_SCHEDULES_ENABLED: "false"
+    FEISHU_INTERNAL_ENABLED: "false"
+    FEISHU_CONTENT_ENABLED: "false"
+    FEISHU_CONTENT_PUSH_ENABLED: "false"
+    INDEXNOW_SUBMIT_ENABLED: "false"
+  volumes:
+    - ../runtime/app:/data
+    - ../runs:/research:ro
+    - ../examples:/examples:ro
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  tests:
+    profiles: ["test"]
+    build:
+      context: .
+      target: build
+      args:
+        NODE_BASE_IMAGE: mirror.gcr.io/library/node:24-trixie-slim
+    image: game-event-radar-release-test:local
+    restart: "no"
+    environment:
+      DATABASE_URL: postgres://radar:${POSTGRES_PASSWORD:?Initialize .env first}@db-test:5432/radar_test
+      MODEL_CALLS_ENABLED: "true"
+      COLLECT_ENABLED: "true"
+      RADAR_SCHEDULES_ENABLED: "false"
+      FEISHU_CONTENT_PUSH_ENABLED: "false"
+      INDEXNOW_SUBMIT_ENABLED: "false"
+    command: ["npm", "run", "test:radar"]
+    depends_on:
+      db-test:
+        condition: service_healthy
+  db-test:
+    profiles: ["test"]
+    image: mirror.gcr.io/library/postgres:17-alpine
+    restart: "no"
+    environment:
+      POSTGRES_USER: radar
+      POSTGRES_DB: radar_test
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Initialize .env first}
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U radar -d radar_test"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  db:
+    image: mirror.gcr.io/library/postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: radar
+      POSTGRES_DB: radar
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Initialize .env first}
+    volumes:
+      - ../runtime/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U radar -d radar"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  setup:
+    <<: *backend
+    restart: "no"
+    command: ["sh", "-c", "node scripts/migrate.ts && node scripts/seed.ts"]
+  api:
+    <<: *backend
+    command: ["node", "apps/api/src/main.ts"]
+    environment:
+      <<: *backend-env
+      API_HOST: 0.0.0.0
+      API_PORT: "3001"
+    depends_on:
+      setup:
+        condition: service_completed_successfully
+  worker:
+    <<: *backend
+    profiles: ["worker"]
+    command: ["node", "apps/worker/src/main.ts"]
+    stop_grace_period: 210s
+    depends_on:
+      setup:
+        condition: service_completed_successfully
+  radar-scheduler:
+    <<: *backend
+    profiles: ["scheduler"]
+    command: ["node", "scripts/radar-scheduler.ts"]
+    stop_grace_period: 120s
+    environment:
+      <<: *backend-env
+      COLLECT_ENABLED: "true"
+      MODEL_CALLS_ENABLED: "true"
+      RADAR_SCHEDULES_ENABLED: "true"
+    volumes:
+      - ../runtime/app:/data
+      - ../runs:/research:ro
+      - ../examples:/examples:ro
+      - ../runs:/update-runs
+    depends_on:
+      setup:
+        condition: service_completed_successfully
+  web:
+    <<: *app
+    command: ["node", "apps/web/server.ts"]
+    environment:
+      NODE_ENV: production
+      API_BASE_URL: http://api:3001
+      SITE_URL: http://127.0.0.1:${RADAR_PORT:-8788}
+      WEB_HOST: 0.0.0.0
+      WEB_PORT: "3000"
+    ports:
+      - "127.0.0.1:${RADAR_PORT:-8788}:3000"
+    depends_on:
+      api:
+        condition: service_started
