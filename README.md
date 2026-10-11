@@ -8,9 +8,9 @@
 
 | 首页与今日关注 | 事件详情 |
 | --- | --- |
-| ![首页](docs/images/home.svg) | ![事件详情](docs/images/event.svg) |
+| <img width="2372" height="2035" alt="image" src="https://github.com/user-attachments/assets/d3eaebf0-8437-437e-b9be-c49b642cfdb8" />| <img width="2372" height="1465" alt="image" src="https://github.com/user-attachments/assets/236c4b0c-63ae-4b73-b50a-ac73ca222492" /> |
 | 独立双评分 | 材料追溯 |
-| ![双评分](docs/images/scores.svg) | ![材料追溯](docs/images/sources.svg) |
+| <img width="1794" height="1105" alt="image" src="https://github.com/user-attachments/assets/938a5634-650e-4a2a-9913-88f253ccf228" />| <img width="2198" height="1227" alt="image" src="https://github.com/user-attachments/assets/af2083dc-654e-4996-9a71-431112c0c32c" /> |
 
 ## 从消息到事件
 
